@@ -1,0 +1,54 @@
+$green : #0f8040;
+
+.container {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.login_btn_mobile {
+    display: flex;
+    // margin: 0 16px;
+    border: 1px solid $green;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 100%;
+    margin: 0;
+    margin-top: 15px;
+
+    span {
+        margin: 11px 4px 11px 0;
+        padding-top: 4px;
+    }
+
+    button {
+        color: $green;
+        // width: 100px;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    &:hover {
+        background-color: $green;
+        color: white;
+
+        button {
+            color: white;
+        }
+    }
+}
+
+.reg_btn_mobile {
+    background-color: $green;
+    height: 48px;
+    width: 100%;
+    border-radius: 12px;
+    color: white;
+    border: 1px solid $green;
+
+    &:hover {
+        color: $green;
+        background-color: white;
+    }
+}

@@ -1,0 +1,224 @@
+$green : #0f8040;
+$gray : #bababa;
+$grayHome : #fafafa;
+$textGray: #333333;
+
+header {
+    display: flex;
+    justify-content: center;
+    // max-width: 1920px;
+    margin: auto;
+    max-height: 112px;
+    width: 100%;
+}
+
+.header__container {
+    height: 112px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    // color: white;
+    position: relative;
+    padding: 16px;
+    max-width: 1920px;
+}
+
+.header__logo {
+    width: 200px;
+    height: 45px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__burger { 
+    display: none;
+}
+
+.header__nav__container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    nav {
+        display: flex;
+        white-space: 0;
+        color: $textGray;
+
+        .nav-item {
+            margin-right: 20px;
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $green;
+            }
+
+            &:hover:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 100%;
+                height: 2px;
+                background-color: green;
+                transition: width 0.3s ease;
+            }
+        }
+
+        .nav-item:hover{
+            color: $green;
+        }
+
+        .nav__button {
+            display: flex;
+
+            .btn_container {
+                margin-top: 4px;
+                margin-right: 16px;
+
+                .btn_stripe1 {
+                    background-color: black;
+                    height: 2px;
+                    width: 15px;
+                }
+
+                .btn_stripe2 {
+                    margin: 4px 0 4px 20px;
+                    background-color: black;
+                    height: 2px;
+                    width: 10px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.header_search{
+    margin-left: 64px;
+    // display: none;
+
+    .search{
+        height: 48px;
+        width: 424px;
+        background-color: #fcfcfc;
+        border: 1px solid $gray;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+
+        .search_icon {
+            position: absolute;
+            top: 9px;
+            left: 10px;
+            height: 30px;
+            width: 30px;
+        }
+
+        input{
+            // margin-left: 15px;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid $gray;
+            color: $gray;
+            border: none;
+            padding-left: 50px;
+        }
+    }
+
+
+}
+
+.header_lang{
+    margin: 0 16px;
+}
+
+.header_cart {
+    margin: 0 16px;
+}
+
+.header_search_tablet {
+    display: none;
+    margin: 0 4px;
+
+    svg {
+        max-height: 24px;
+        max-width: 24px;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .header__nav__container {
+        display: none;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header_search {
+        display: none;
+    }
+
+    .header_lang {
+        display: none;
+    }
+
+    .header_login {
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .header__nav__container {
+        display: none;
+    }
+
+    .header_search {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+    .header__nav__container {
+        display: block;
+    }
+
+    .header__burger {
+        display: none;
+    }
+
+    .header_search {
+        display: none;
+    }
+
+    .header_lang {
+        display: block;
+    }
+
+    .header_login {
+        display: block;
+    }
+
+    .header_search_tablet {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1920px){
+    .header_search {
+        display: block;
+    }
+
+    .header_search_tablet {
+        display: none;
+    }
+}

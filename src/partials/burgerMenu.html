@@ -1,0 +1,74 @@
+<div>
+    <div id="menuButton" onclick="openMenu()" class='cursor-pointer'>
+        <div class='stripe'></div>
+        <div class='stripe middle'></div>
+        <div class='stripe'></div>
+    </div>
+    
+    <div id="menu">
+        <div class='menu-container'>
+          <div class="wrapper">
+            <div class="mobile_menu_head">
+                <div id="closeButton" onclick="closeMenu()">
+                    <span class='stripe-1'></span>
+                    <span class='stripe-2'></span>
+                  </div>
+                  <div class='logo'>
+                    @include('../img/svg/logo.svg')
+                  </div>
+            </div>
+
+          </div>
+          <div class='login_status'>
+            @include('./menuLoginStatus.html')
+          </div>
+          <div class='categories'>
+            <h2>Разделы</h2>
+            @include('./categoryItem.html')
+          </div>
+          <nav>
+            <span>Библиотека</span>
+            <span>Видеоблог</span>
+            <span>О проекте</span>
+            <span>Контакты</span>
+          </nav>
+          <div class='bottom_container'>
+            <div class="search">
+                <div class="search_icon">@include("../img/svg/searchIcon.svg")</div>
+                <input placeholder="Поиск по сайту">
+              </div>
+            <div class='lang'>
+              <img class='flag' width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/>
+              <span>Русский</span>
+              <img class='arrow' width="10" height="30" src="https://img.icons8.com/ios-glyphs/30/0f8040/sort-down.png" alt="sort-down"/>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+</div>
+<script>
+    //     document.addEventListener('DOMContentLoaded', function() {
+    // const menuButton = document.getElementById('menuButton');
+    // const menu = document.getElementById('menu');
+    // const closeButton = document.getElementById('closeButton');
+
+    // menuButton.addEventListener('click', function() {
+    //     menu.style.display = 'block';
+    // });
+
+    // closeButton.addEventListener('click', function() {
+    //     menu.style.display = 'none';
+    // });
+    // });
+
+    function openMenu() {
+        const menu = document.getElementById('menu');
+        menu.style.display = 'block';
+    }
+
+    function closeMenu() {
+        const menu = document.getElementById('menu');
+        menu.style.display = 'none';
+    }
+</script>

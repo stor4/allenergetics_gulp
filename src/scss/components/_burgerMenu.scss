@@ -1,0 +1,171 @@
+#menuButton {
+    .stripe{
+        height: 2px;
+        width: 17px;
+        background-color: black;
+    }
+
+    .middle {
+        margin: 4px 0;
+    }
+}
+
+.mobile_menu_head {
+    display: flex;
+    padding-top: 15px;
+    padding-left: 10px;
+
+
+
+    #closeButton {
+        z-index: 10;
+        padding: 25px 4px 0 5px;
+        cursor: pointer;
+        position: relative;
+    
+        span {
+            height: 1.5px;
+            width: 15px;
+            position: relative;
+            background-color: black;
+            rotate: (45deg);
+            position: absolute;
+        }
+    
+        .stripe-2 {
+            rotate: (-45deg);
+        }
+    }
+
+    .logo {
+        padding-left: 10px;
+
+        svg{
+            width: 250px;
+            height: 50px;
+        }
+    }
+
+}
+
+
+
+#menu {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+
+    .menu-container {
+        background-color: white;
+        width: 300px;
+        height: 100%;
+        overflow-y: auto;
+        transition: opacity 0.5s ease;
+
+        .wraper{
+            display: flex;
+            padding-left: 4px;
+            padding-top: 33.5px;
+
+
+        }
+
+        .login_status {
+            margin-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .categories {
+            padding: 15px 0 15px 15px;
+            border-top: 1px solid #f0f0f0;
+            border-bottom: 1px solid #f0f0f0;
+
+            h2 {
+                font-size: 22px;
+            }
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            border-bottom: 1px solid #f0f0f0;
+
+            span {
+                margin: 10px 0;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: $green;
+                }
+            }
+        }
+
+        .bottom_container {
+            width: 100%;
+            padding: 0 5%;
+
+            .search{
+                height: 48px;
+                width: 100%;
+                background-color: #fcfcfc;
+                border: 1px solid $gray;
+                border-radius: 8px;
+                position: relative;
+                display: flex;
+                margin-top: 30px;
+        
+                .search_icon {
+                    svg {
+                        position: absolute;
+                        top: 9px;
+                        left: 10px;
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
+        
+                input{
+                    // margin-left: 15px;
+                    width: 100%;
+                    background-color: transparent;
+                    border: 1px solid $gray;
+                    color: $gray;
+                    border: none;
+                    padding-left: 50px;
+                }
+            }
+
+            .lang {
+                width: 100%;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                border: 1px solid $green;
+                margin: 15px 0;
+                border-radius: 12px;
+                position: relative;
+
+                .flag {
+                    margin: 0 4px;
+                }
+
+                span {
+                    color: $green;
+                    font-weight: 600;
+                }
+
+                .arrow {
+                    position: absolute;
+                    right: 4px;
+                }
+            }
+        }
+    }
+
+}

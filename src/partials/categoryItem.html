@@ -1,0 +1,62 @@
+<style>
+  .item {
+    text-decoration: underline;
+    color: #0f8040;
+  }
+
+</style>
+<div id="category-list"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const categoryList = document.getElementById('category-list');
+    
+    const categories = [
+      { color: 'e91d62', name: 'Энергия ветра' },
+      { color: 'f44236', name: 'Солнечная энергия' },
+      { color: '643bb3', name: 'Гидроэнергетика' },
+      {color: '2295f0', name: 'Энергия приливов' },
+      {color: '01bbd4', name: 'Энергия волн'},
+      {color: '019587', name: 'Геотермальная энергия'},
+      {color: '4dae4d', name: 'Рассеянная тепловая энергия'},
+      {color: '8cc737', name: 'Энергия биомассы'},
+      {color: 'fceb39', name: 'Энергия ветра'},
+      {color: 'ff9800', name: 'Солнечная энергия'},
+      {color: 'c931e4', name: 'Гидроэнертетика'},
+      {color: 'bfc3de', name: 'Энергия приливов'}
+    ];
+
+    categories.forEach(function(category) {
+      const categoryItem = document.createElement('div');
+      categoryItem.style.display = 'flex'
+      categoryItem.style.alignItems = 'center'
+      categoryItem.style.marginTop = '15px'
+      categoryItem.style.position = 'relative'
+
+      const categoryColor = document.createElement('div');
+      categoryColor.style.height = '8px'
+      categoryColor.style.width = '8px'
+      categoryColor.style.borderRadius = '16px'
+      categoryColor.style.marginRight = '4px'
+      categoryColor.style.background = '#' + category.color;
+
+      const categoryName = document.createElement('h5');
+    //   categoryName.className = 'text-14px group-hover:underline';
+      categoryItem.style.fontSize = '14px'
+      categoryName.style.margin = 0
+      categoryName.textContent = category.name;
+
+      categoryItem.appendChild(categoryColor);
+      categoryItem.appendChild(categoryName);
+      categoryList.appendChild(categoryItem);
+
+      categoryItem.addEventListener("mouseenter", function() {
+        this.classList.add('item')
+      })
+
+      categoryItem.addEventListener("mouseleave", function() {
+        this.classList.remove('item')
+      })
+    });
+  });
+</script>

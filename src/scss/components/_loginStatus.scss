@@ -1,0 +1,40 @@
+$green : #0f8040;
+
+.login_container {
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.login_btn {
+    display: flex;
+    margin-top: 0;
+    margin: 0 16px;
+    border: none;
+
+    span {
+        margin: 16px 4px 0 0
+    }
+
+    button {
+        color: $green;
+        // width: 100px;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.reg_btn {
+    background-color: $green;
+    height: 48px;
+    min-width: 168px;
+    border-radius: 12px;
+    color: white;
+    border: none;
+
+    &:hover {
+        color: $green;
+        background-color: white;
+    }
+}
+
