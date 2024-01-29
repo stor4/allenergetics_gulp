@@ -1,40 +1,122 @@
-$green : #0f8040;
+// $green : #0f8040;
 
-.login_container {
+// .login_container {
+//     display: flex;
+//     font-family: "Montserrat", sans-serif;
+//     font-weight: 800;
+// }
+
+// .login_btn {
+//     display: flex;
+//     margin-top: 0;
+//     margin: 0 16px;
+//     border: none;
+
+//     span {
+//         margin: 16px 4px 0 0
+//     }
+
+//     button {
+//         color: $green;
+//         // width: 100px;
+//         background-color: transparent;
+//         border: none;
+//     }
+
+//     // &:hover {
+//     //     border: 1px solid $green;
+//     //     border-radius: 12px;
+//     // }
+// }
+
+// .reg_btn {
+//     background-color: $green;
+//     height: 48px;
+//     min-width: 168px;
+//     border-radius: 12px;
+//     color: white;
+//     border: 1px solid $green;
+
+//     &:hover {
+//         color: $green;
+//         background-color: white;
+//     }
+// }
+
+.login {
     display: flex;
     font-family: "Montserrat", sans-serif;
     font-weight: 800;
 }
-
 .login_btn {
     display: flex;
     margin-top: 0;
     margin: 0 16px;
     border: none;
+    position: relative;
 
-    span {
-        margin: 16px 4px 0 0
+    .login_btn-img {
+        margin: 16px 4px 0 0;
     }
 
-    button {
+    .login_btn-open {
         color: $green;
         // width: 100px;
         background-color: transparent;
         border: none;
-    }
-}
 
-.reg_btn {
-    background-color: $green;
-    height: 48px;
-    min-width: 168px;
-    border-radius: 12px;
-    color: white;
-    border: none;
+        &:hover {
+            .login_btn-form {
+                display: flex;
+            }
+        }
+    }
+
+    .login_btn-form {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: -55px;
+        padding: 15px;
+        border-radius: 12px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border: 0.5px solid $gray;
+    }
 
     &:hover {
-        color: $green;
-        background-color: white;
+        .login_btn-form {
+            display: flex;
+        }
     }
 }
 
+.login_btn-login {
+    width: 100%;
+}
+.login_btn-psw {
+    width: 100%;
+}
+.login_btn-submit {
+    height: 40px;
+    margin: 15px 0 5px 0;
+}
+.login_btn-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+// .reg_btn {
+//     background-color: $green;
+//     height: 48px;
+//     min-width: 168px;
+//     border-radius: 12px;
+//     color: white;
+//     border: 1px solid $green;
+//     cursor: pointer;
+
+//     &:hover {
+//         color: $green;
+//         background-color: white;
+//     }
+// }

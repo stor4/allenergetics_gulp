@@ -105,3 +105,26 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.btn-big {
+  background-color: $green;
+  height: 48px;
+  min-width: 168px;
+  border-radius: 12px;
+  color: white;
+  border: 1px solid $green;
+  cursor: pointer;
+
+  &:hover {
+      color: $green;
+      background-color: white;
+  }
+}
+
+.form-input {
+  color: #bababa;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid $gray;
+  margin: 5px 0;
+}

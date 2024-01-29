@@ -1,7 +1,20 @@
-<div class="container">
+<div class="login_mobile">
     <button class="reg_btn_mobile">Регистрация</button>
     <div class="login_btn_mobile">
         <span><img width="16" height="16" src="https://img.icons8.com/tiny-glyph/16/0f8040/enter-2.png" alt="enter-2"/></span>
         <button>Войти</button>
     </div>
+    <div id="form" class="login_btn-form">
+        <input class="form-input login_btn-login" placeholder="Логин"/>
+        <input class="form-input login_btn-psw" placeholder="Пароль"/>
+        <button class="btn-big login_btn-submit" onclick="openForm()">Войти</button>
+        <p class="login_btn-link">Забыли пароль?</p>
+    </div>
 </div>
+<script>
+    function openForm() {
+        const form = document.querySelector('.login_btn-form')
+        // form.style.display = 'flex'
+        form.classList.add('active')
+    }
+</script>
