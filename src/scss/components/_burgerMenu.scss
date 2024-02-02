@@ -1,4 +1,6 @@
-#menu_button {
+.menu__button {
+    cursor: pointer;
+
     .stripe{
         height: 2px;
         width: 17px;
@@ -10,51 +12,16 @@
     }
 }
 
-.mobile_menu_head {
-    display: flex;
-    padding-top: 15px;
-    padding-left: 10px;
-
-    #menu_closeButton {
-        padding: 25px 4px 0 5px;
-        cursor: pointer;
-        position: relative;
-    
-        span {
-            height: 1.5px;
-            width: 15px;
-            position: relative;
-            background-color: black;
-            rotate: (45deg);
-            position: absolute;
-        }
-    
-        .stripe-2 {
-            rotate: (-45deg);
-        }
-    }
-
-    .logo {
-        padding-left: 20px;
-
-        img{
-            width: 250px;
-            height: 50px;
-        }
-    }
-
-}
-
-#menu {
+.menu {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    display: none;
+    visibility: hidden;
 
-    #menu-container {
+    .menu__body {
         background-color: white;
         width: 300px;
         height: 100%;
@@ -63,18 +30,47 @@
         left: -300px;
         transition: transform 0.3s ease-in-out; 
 
-        .menu-wraper{
+        .menu__header{
             display: flex;
             padding-left: 4px;
             padding-top: 33.5px;
+
+            .menu__close {
+                padding: 25px 4px 0 5px;
+                cursor: pointer;
+                position: relative;
+            
+                span {
+                    height: 1.5px;
+                    width: 15px;
+                    position: relative;
+                    background-color: black;
+                    rotate: (45deg);
+                    position: absolute;
+                }
+            
+                .stripe-2 {
+                    rotate: (-45deg);
+                }
+            }
+        
+            .menu__logo {
+                padding-left: 20px;
+                cursor: pointer;
+        
+                img{
+                    width: 250px;
+                    height: 50px;
+                }
+            }
         }
 
-        .menu_login_status {
+        .menu__user {
             margin-top: 30px;
             padding-bottom: 30px;
         }
 
-        .menu_categories {
+        .menu__categories {
             padding: 15px 0 15px 15px;
             border-top: 1px solid #f0f0f0;
             border-bottom: 1px solid #f0f0f0;
@@ -84,14 +80,17 @@
             }
         }
 
-        nav {
+        .menu__nav {
             display: flex;
             flex-direction: column;
             margin-left: 15px;
             border-bottom: 1px solid #f0f0f0;
 
-            span {
+            .menu__nav-item {
                 margin: 10px 0;
+                cursor: pointer;
+                text-decoration: none;
+                color: inherit;
 
                 &:hover {
                     text-decoration: underline;
@@ -100,11 +99,11 @@
             }
         }
 
-        .menu_bottom_container {
+        .menu__footer{
             width: 100%;
             padding: 0 5%;
 
-            .search{
+            .menu__search{
                 height: 48px;
                 width: 100%;
                 background-color: #fcfcfc;
@@ -114,17 +113,15 @@
                 display: flex;
                 margin-top: 30px;
         
-                .search_icon {
-                    img {
-                        position: absolute;
-                        top: 2px;
-                        left: 4px;
-                        height: 25px;
-                        width: 25px;
-                    }
+                img {
+                    position: absolute;
+                    top: 12px;
+                    left: 13px;
+                    height: 25px;
+                    width: 25px;
                 }
         
-                input{
+                .menu__search-input{
                     // margin-left: 15px;
                     width: 100%;
                     background-color: transparent;
@@ -135,7 +132,7 @@
                 }
             }
 
-            #menu_lang {
+            .menu__lang {
                 width: 100%;
                 height: 48px;
                 display: flex;
@@ -144,8 +141,9 @@
                 margin: 15px 0;
                 border-radius: 12px;
                 position: relative;
+                cursor: pointer;
 
-                .flag {
+                .menu__lang-flag {
                     margin: 0 4px;
                 }
 
@@ -154,12 +152,12 @@
                     font-weight: 600;
                 }
 
-                .arrow {
+                .menu__lang-arrow {
                     position: absolute;
                     right: 4px;
                 }
 
-                #menu_lang_open {
+                .menu__lang-open {
                     position: absolute;
                     width: 100%;
                     top: 45px;
@@ -168,15 +166,16 @@
                     border-bottom-left-radius: 12px;
                     border-bottom-right-radius: 12px;
                     margin-bottom: 105px;
-                    display: none;
+                    visibility: hidden;
+                    overflow: hidden;
 
-                    .lang_open-item {
+                    .lang__open-item {
                         display: flex;
                         align-items: center;
                         width: 100%;
                         padding: 10px 0;
                         background-color: transparent;
-                        border-radius: 12px;
+                        cursor: pointer;
 
                         &:hover {
                             background-color: rgb(0,0,0,0.1);

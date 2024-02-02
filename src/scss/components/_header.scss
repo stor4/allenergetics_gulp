@@ -1,6 +1,3 @@
-
-
-
 header {
     display: flex;
     justify-content: center;
@@ -10,7 +7,7 @@ header {
     width: 100%;
 }
 
-.header__container {
+.header__body {
     height: 112px;
     display: flex;
     justify-content: space-between;
@@ -21,6 +18,7 @@ header {
     // color: white;
     position: relative;
     padding: 16px;
+    width: 100%;
     max-width: 1920px;
 }
 
@@ -31,27 +29,30 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .header__burger { 
     display: none;
 }
 
-.header__nav__container {
+.header__nav {
     display: flex;
     align-items: center;
     margin-left: auto;
 
-    nav {
+    .nav__body {
         display: flex;
         white-space: 0;
         color: $textGray;
 
-        .nav-item {
+        .nav__item {
             margin-right: 20px;
             cursor: pointer;
             position: relative;
             transition: color 0.3s ease;
+            color: inherit;
+            text-decoration: none;
 
             &:hover {
                 color: $green;
@@ -69,7 +70,7 @@ header {
             }
         }
 
-        .nav-item:hover{
+        .nav__item:hover{
             color: $green;
         }
 
@@ -99,7 +100,7 @@ header {
 
 }
 
-.header_search{
+.header__search{
     margin-left: 64px;
 }
 
@@ -135,14 +136,15 @@ header {
 
 
 
-.header_lang{
+.header__lang{
     margin: 0 16px;
     position: relative;
+    cursor: pointer;
 
     div {
         position: absolute;
         left: -6px;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
@@ -150,6 +152,8 @@ header {
         border-radius: 12px;
         width: 35px;
         height: 60px;
+        opacity: 0;
+        transition: opacity 0.2s ease; 
 
         img {
             margin: 4px 0;
@@ -159,27 +163,28 @@ header {
 
     &:hover {
         div {
-            display: flex;
+            opacity: 1;
         }
     }
 }
 
-.header_cart {
+.header__cart {
     margin: 0 16px;
     position: relative;
+    cursor: pointer;
 
     div {
         position: absolute;
         border: 1px solid $gray;
         border-radius: 12px;
-        width: 170px;
+        width: 155px;
         left: -300%;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         font-size: 12px;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.2s ease;
     
         span {
             color: $green;
@@ -190,16 +195,16 @@ header {
 
     &:hover{
         div {
-            display: flex;
             opacity: 1;
         }
     } 
 }
 
-.header_search_tablet {
+.header__search-tablet {
     display: none;
     margin: 0 4px;
     position: relative;
+    cursor: pointer;
 
     img {
         height: 25px;
@@ -231,7 +236,7 @@ header {
 }
 
 @media only screen and (min-width: 0) and (max-width: 768px) {
-    .header__nav__container {
+    .header__nav {
         display: none;
     }
 
@@ -239,32 +244,40 @@ header {
         display: block;
     }
 
-    .header_search {
+    .header__search {
         display: none;
     }
 
-    .header_lang {
+    .header__lang {
         display: none;
     }
 
-    .header_login {
+    .header__login {
         display: none;
     }
     
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
-    .header__nav__container {
+    .header__body {
+        width: 80%;
+    }
+
+    .header__nav {
         display: none;
     }
 
-    .header_search {
+    .header__search {
         display: block;
     }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1920px) {
-    .header__nav__container {
+    .header__body {
+        width: 100%;
+    }
+
+    .header__nav{
         display: block;
     }
 
@@ -272,30 +285,29 @@ header {
         display: none;
     }
 
-    .header_search {
+    .header__search {
         display: none;
     }
 
-    .header_lang {
+    .header__lang {
         display: block;
     }
 
-    .header_login {
+    .header__login {
         display: block;
     }
-
-    .header_search_tablet {
+    .header__search-tablet {
         display: block;
     }
 }
 
 @media only screen and (min-width: 1920px){
-    .header_search {
+    .header__search {
         display: block;
         width: 424px;
     }
 
-    .header_search_tablet {
+    .header__search-tablet {
         display: none;
     }
 }

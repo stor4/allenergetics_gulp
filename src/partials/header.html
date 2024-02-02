@@ -1,13 +1,13 @@
 <header class="header">
-  <div class="header__container">
+  <div class="header__body">
     <div class="header__burger">
       @include("./burgerMenu.html")
     </div>
     <div class="header__logo">
-      <img alt="logo" src="../img/svg/logo.svg">
+      <a href="#"><img src="../img/svg/logo.svg" alt="logo"></a>
     </div>
-    <div class="header__nav__container">
-      <nav>
+    <div class="header__nav">
+      <nav class="nav__body">
         <!-- <div class="nav_button">
           <div class="btn_container">
             <div class="btn_stripe1"></div>
@@ -16,43 +16,41 @@
           </div>
           <span>Разделы</span>
         </div> -->
-        <span class="nav-item">Разделы</span>
-        <span class='nav-item'>Библиотека</span>
-        <span class='nav-item'>Видеоблог</span>
-        <span class='nav-item'>О проекте</span>
-        <span class='nav-item'>Контакты</span>
-
+        <a href="#" class="nav__item"><p>Разделы</p></a>
+        <a href="#" class="nav__item"><p>Библиотека</p></a>
+        <a href="#" class="nav__item"><p>Видеоблог</p></a>
+        <a href="#" class="nav__item"><p>О проекте</p></a>
+        <a href="#" class="nav__item"><p>Контакты</p></a>
       </nav>
-
     </div>
-    <div class="header_search">
+    <div class="header__search">
       <div class="search">
-        <div class="search_icon"><img alt="SearchIcon" src="../img/svg/searchIcon.svg"></div>
+        <div class="search_icon"><img src="../img/svg/searchIcon.svg" alt="SearchIcon" ></div>
         <input placeholder="Поиск по сайту">
       </div>
     </div>
-    <div class="header_lang">
-      <img width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/>
+    <div class="header__lang">
+      <a href="#"><img width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/></a>
       <div>
-        <img width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/>
-        <img width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/>
+        <a href="#"><img width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/></a>
+        <a href="#"><img width="24" height="8" src="https://img.icons8.com/color/48/russian-federation-circular.png" alt="russian-federation-circular"/></a>
       </div>
     </div>
-    <div class="header_cart">
+    <div class="header__cart">
       <img width="24" height="8" src="https://img.icons8.com/material-rounded/24/bababa/shopping-cart.png" alt="shopping-cart"/>
       <div>
         <p>Товаров в корзине: <span>0</span></p>
       </div>
     </div>
-    <div class="header_search_tablet">
-      <img alt="SearchIcon" src="../img/svg/searchIcon.svg">
+    <div class="header__search-tablet">
+      <img src="../img/svg/searchIcon.svg" alt="SearchIcon">
       <div>
         <div class="search tablet">
           <input class="tablet" placeholder="Поиск по сайту">
         </div>
       </div>
     </div>
-    <div class="header_login">
+    <div class="header__login">
       @include("./loginStatus.html")
     </div>
   </div>

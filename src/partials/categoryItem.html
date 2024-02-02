@@ -1,62 +1,93 @@
 <style>
-  .item {
+  #categories {
+    padding-inline-start: 0;
+    margin: 0;
+  }
+
+  .categories__item {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    position: relative;
+  }
+
+  .categories__color {
+    height: 8px;
+    width: 8px;
+    border-radius: 16px;
+    margin-right: 4px;
+  }
+
+  .categories__name {
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .categories__item-hover {
     text-decoration: underline;
     color: #0f8040;
     transition: color 0.3s ease-in-out;
   }
 
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .link:hover {
+    color: inherit;
+  }
+
 </style>
-<div id="category-list"></div>
+<nav><ul id="categories"></ul></nav>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const categoryList = document.getElementById('category-list');
+    const categoryList = document.getElementById('categories');
     
     const categories = [
       { color: 'e91d62', name: 'Энергия ветра' },
       { color: 'f44236', name: 'Солнечная энергия' },
       { color: '643bb3', name: 'Гидроэнергетика' },
-      {color: '2295f0', name: 'Энергия приливов' },
-      {color: '01bbd4', name: 'Энергия волн'},
-      {color: '019587', name: 'Геотермальная энергия'},
-      {color: '4dae4d', name: 'Рассеянная тепловая энергия'},
-      {color: '8cc737', name: 'Энергия биомассы'},
-      {color: 'fceb39', name: 'Энергия ветра'},
-      {color: 'ff9800', name: 'Солнечная энергия'},
-      {color: 'c931e4', name: 'Гидроэнертетика'},
-      {color: 'bfc3de', name: 'Энергия приливов'}
+      { color: '2295f0', name: 'Энергия приливов' },
+      { color: '01bbd4', name: 'Энергия волн' },
+      { color: '019587', name: 'Геотермальная энергия' },
+      { color: '4dae4d', name: 'Рассеянная тепловая энергия' },
+      { color: '8cc737', name: 'Энергия биомассы' },
+      { color: 'fceb39', name: 'Энергия ветра' },
+      { color: 'ff9800', name: 'Солнечная энергия'} ,
+      { color: 'c931e4', name: 'Гидроэнертетика' },
+      { color: 'bfc3de', name: 'Энергия приливов' }
     ];
 
     categories.forEach(function(category) {
-      const categoryItem = document.createElement('div');
-      categoryItem.style.display = 'flex'
-      categoryItem.style.alignItems = 'center'
-      categoryItem.style.marginTop = '15px'
-      categoryItem.style.position = 'relative'
+      const categoryItem = document.createElement('li');
+      categoryItem.classList.add('categories__item')
+
+      const link = document.createElement('a')
+      link.href = '#'
+      link.classList.add('link')
 
       const categoryColor = document.createElement('div');
-      categoryColor.style.height = '8px'
-      categoryColor.style.width = '8px'
-      categoryColor.style.borderRadius = '16px'
-      categoryColor.style.marginRight = '4px'
       categoryColor.style.background = '#' + category.color;
+      categoryColor.classList.add('categories__color')
 
-      const categoryName = document.createElement('h5');
-    //   categoryName.className = 'text-14px group-hover:underline';
-      categoryItem.style.fontSize = '14px'
-      categoryName.style.margin = 0
+      const categoryName = document.createElement('p');
+      categoryName.classList.add('categories__name')
       categoryName.textContent = category.name;
 
       categoryItem.appendChild(categoryColor);
-      categoryItem.appendChild(categoryName);
+      link.appendChild(categoryName)
+      categoryItem.appendChild(link);
       categoryList.appendChild(categoryItem);
 
       categoryItem.addEventListener("mouseenter", function() {
-        this.classList.add('item')
+        this.classList.add('categories__item-hover')
       })
 
       categoryItem.addEventListener("mouseleave", function() {
-        this.classList.remove('item')
+        this.classList.remove('categories__item-hover')
       })
     });
   });

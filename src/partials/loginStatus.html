@@ -1,14 +1,21 @@
 <div class="login">
-    <div class="login_btn">
-        <span class="login_btn-img"><img width="16" height="16" src="https://img.icons8.com/tiny-glyph/16/0f8040/enter-2.png" alt="enter-2"/></span>
-        <button class="login_btn-open">Войти</button>
-        <div class="login_btn-form">
-            <input class="form-input login_btn-login" placeholder="Логин"/>
-            <input class="form-input login_btn-psw" placeholder="Пароль"/>
-            <button class="btn-big login_btn-submit">Войти</button>
-            <p class="login_btn-link">Забыли пароль?</p>
+    <div class="login__btn" >
+        <span class="login__btn-img"><img width="16" height="16" src="https://img.icons8.com/tiny-glyph/16/0f8040/enter-2.png" alt="enter-2"/></span>
+        <button class="login__btn-open">Войти</button>
+        <div class="login__form">
+            <input class="form-input login__form-login" placeholder="Логин"/>
+            <input class="form-input login__form-psw" placeholder="Пароль"/>
+            <button class="btn-big login__form-submit">Войти</button>
+            <a href="#" class="login__form-link"><p>Забыли пароль?</p></a>
         </div>
     </div>
-    <button class="reg_btn btn-big">Регистрация</button>
+    <button class="login__reg btn-big">Регистрация</button>
 </div>
+<script>
+    const loginBtn = document.getElementById('loginBtn');
+    const loginForm = document.querySelector('.login__form');
 
+    loginBtn.addEventListener('click', function() {
+        loginForm.style.display = 'flex';
+    });
+</script>
