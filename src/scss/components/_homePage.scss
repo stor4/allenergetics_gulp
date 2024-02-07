@@ -1,0 +1,36 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &__body {
+        max-width: 1920px;
+        width: 100%;
+        padding: 0 15px;
+        margin-top: 15px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+
+
+    }
+
+    &__hero {
+        width: 80%;
+    }
+
+    &__category {
+        padding: 15px 0 15px 15px;
+        background-color: #fafafa;
+        width: 20%;
+        margin-right: 15px;
+
+        &-title{
+            font-size: 32px;
+            font-weight: bold;
+            margin-left: 35px;
+        }
+    }
+}

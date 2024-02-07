@@ -1,9 +1,10 @@
 <div class="menuLogin">
     <button class="menuLogin__reg">Регистрация</button>
-    <div class="menuLogin__login">
+    <input type="checkbox" id="toggleLoginForm" class="menuLogin__toggle">
+    <label for="toggleLoginForm" class="menuLogin__login">
         <img width="16" height="16" src="https://img.icons8.com/tiny-glyph/16/0f8040/enter-2.png" alt="enter-2"/>
         <button>Войти</button>
-    </div>
+    </label>
     <div id="form" class="menuLogin__form">
         <input class="form-input menuLogin__login" placeholder="Логин"/>
         <input class="form-input menuLogin__psw" placeholder="Пароль"/>
@@ -11,10 +12,3 @@
         <a href="#" class="menuLogin__link"><p>Забыли пароль?</p></a>
     </div>
 </div>
-<script>
-    function openForm() {
-        const form = document.getElementById('form')
-        // form.style.display = 'flex'
-        form.classList.add('active')
-    }
-</script>

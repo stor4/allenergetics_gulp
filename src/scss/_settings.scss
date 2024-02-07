@@ -31,6 +31,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .site-container {
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
 }

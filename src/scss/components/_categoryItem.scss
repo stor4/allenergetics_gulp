@@ -1,0 +1,32 @@
+.categories {
+    padding-inline-start: 0;
+    margin: 0;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        position: relative;
+    
+        &:hover {
+            text-decoration: underline;
+            color: #0f8040;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+
+    &__color {
+        height: 8px;
+        width: 8px;
+        border-radius: 16px;
+        margin-right: 4px;
+    }
+
+    &__name {
+        font-size: 14px;
+        margin: 0;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
+}

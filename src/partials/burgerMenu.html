@@ -1,8 +1,3 @@
-<style>
-    #menu-container {
-        transition: transform 0.3s ease-in-out;
-    }
-</style>
 <div>
     <div class="menu__button" id="menu__button" onclick="openMenu()" class='cursor-pointer'>
         <div class='stripe'></div>
@@ -55,8 +50,7 @@
             </div>
           </div>
         </div>
-    </div>
-    
+      </div>
 </div>
 <script>
     const menuContainer = document.getElementById('menu__body')
@@ -68,7 +62,7 @@
 
     const menuOverlay = document.getElementById('menu-container')
 
-    menuOverlay.addEventListener('click', function(event) {
+    menuOverlay?.addEventListener('click', function(event) {
         if (!menu.contains(event.target)) {
             closeMenu();
         }
@@ -104,7 +98,6 @@
 
   //   document.addEventListener('click', function(event) {
   //   const isClickInsideMenu = menuContainer.contains(event.target);
-  //   debugger
   //   if (isClickInsideMenu && isMenuOpen) {
   //       return;
   //   }

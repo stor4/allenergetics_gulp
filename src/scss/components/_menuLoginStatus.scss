@@ -1,7 +1,61 @@
 .menuLogin {
     padding: 0 5%;
 
-    .menuLogin__form {
+    &__reg {
+        background-color: $green;
+        height: 48px;
+        width: 100%;
+        border-radius: 12px;
+        color: white;
+        border: 1px solid $green;
+        cursor: pointer;
+    
+        &:hover {
+            color: $green;
+            background-color: white;
+        }
+    }
+
+    &__toggle {
+        display: none;
+    }
+
+    &__login {
+        display: flex;
+        // margin: 0 16px;
+        border: 1px solid $green;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        width: 100%;
+        margin: 0;
+        margin-top: 15px;
+        cursor: pointer;
+    
+        img {
+            margin: 11px 4px 14px 0;
+            padding-top: 4px;
+        }
+    
+        button {
+            color: $green;
+            // width: 100px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    
+        &:hover {
+            background-color: $green;
+            color: white;
+    
+            button {
+                color: white;
+            }
+        }
+    }
+
+    &__form {
         display: none;
         margin-top: 15px;
         padding: 15px;
@@ -11,74 +65,28 @@
         align-items: center;
         border: 0.5px solid $gray;
     }
-}
 
-.lmenuLogin__login {
-    width: 100%;
-}
-.menuLogin__psw {
-    width: 100%;
-}
-.menuLogin__submit {
-    height: 40px;
-    margin: 15px 0 5px 0;
-    cursor: pointer;
-}
-.menuLogin__ink {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.menuLogin__login {
-    display: flex;
-    // margin: 0 16px;
-    border: 1px solid $green;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    width: 100%;
-    margin: 0;
-    margin-top: 15px;
-    cursor: pointer;
-
-    img {
-        margin: 11px 4px 14px 0;
-        padding-top: 4px;
+    &__psw {
+        width: 100%;
     }
 
-    button {
-        color: $green;
-        // width: 100px;
-        background-color: transparent;
-        border: none;
+    &__submit {
+        height: 40px;
+        margin: 15px 0 5px 0;
         cursor: pointer;
     }
 
-    &:hover {
-        background-color: $green;
-        color: white;
-
-        button {
-            color: white;
-        }
+    &__link {
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
 
-.menuLogin__reg {
-    background-color: $green;
-    height: 48px;
-    width: 100%;
-    border-radius: 12px;
-    color: white;
-    border: 1px solid $green;
-    cursor: pointer;
+// .form-input {
 
-    &:hover {
-        color: $green;
-        background-color: white;
-    }
-}
+// }
 
-.active {
+.menuLogin__toggle:checked ~ .menuLogin__form {
     display: flex;
 }
+

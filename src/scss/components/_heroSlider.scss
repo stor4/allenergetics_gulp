@@ -1,0 +1,118 @@
+.hero {
+    height: 100%;
+
+    &__slide {
+        background-image: url('https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png');
+        position: relative;
+        color: white;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        min-height: 552px;
+    }
+
+    &__label {
+        background-color: #663ab6;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 12px;
+        border-bottom-left-radius: 12px;
+        padding: 7px 15px;
+
+        p{
+            margin: 0;
+        }
+    }
+
+    &__social {
+        position: absolute;
+        left: 0;
+        top: 0;
+        filter: invert(100%);
+        padding: 20px;
+
+        a{
+            cursor: pointer;
+        }
+
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 60%;
+
+        &-title{
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        &-description{
+            font-size: 16px;
+            margin: 15px;
+    
+        }
+
+        &-button{
+
+            &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+
+        img{ 
+            filter: invert(100%);
+            height: 24px;
+            width: 24px;
+            margin-right: 5px;
+        }
+    }
+
+    &__about-views { 
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    &__about-comments {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    &__about-shares {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    &__about-user {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-name {
+        font-weight: bold;
+    }
+}

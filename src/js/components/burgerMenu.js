@@ -7,7 +7,7 @@ const langOpen = document.getElementById('menu_lang_open')
 
 const menuOverlay = document.getElementById('menu-container')
 
-menuOverlay.addEventListener('click', function(event) {
+menuOverlay?.addEventListener('click', function(event) {
     if (!menu.contains(event.target)) {
         closeMenu();
     }
