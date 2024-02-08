@@ -1,7 +1,6 @@
 .header {
     display: flex;
     justify-content: center;
-    // max-width: 1920px;
     margin: auto;
     max-height: 112px;
     width: 100%;
@@ -14,7 +13,6 @@
         font-family: "Montserrat", sans-serif;
         font-size: 14px;
         font-weight: 600;
-        // color: white;
         position: relative;
         padding: 16px;
         width: 100%;
@@ -55,6 +53,12 @@
 
     &__search {
         margin-left: 64px;
+
+        input {
+            background-image: url("../../img/svg/searchIcon.svg");
+            background-repeat: no-repeat;
+            background-position: left 10px top 50%;
+        }
     }
 
     &__lang {
@@ -70,7 +74,7 @@
 
         div {
             position: absolute;
-            left: -6px;
+            top: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -82,6 +86,8 @@
             opacity: 0;
             transition: opacity 0.2s ease;
             width: 100%; 
+            z-index: 2;
+            background-color: white;
     
             img {
                 margin: 4px 0;
@@ -109,13 +115,13 @@
             flex-shrink: 0;
         }
     
-    
         div {
             position: absolute;
             border: 1px solid $gray;
             border-radius: 12px;
-            width: 155px;
-            left: -300%;
+            width: 75px;
+            left: -150%;
+            top: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -194,7 +200,6 @@
         &:hover {
             color: $green;
         }
-
 
         &:hover:after {
             content: '';
@@ -302,7 +307,6 @@
 
         &__burger, &__search {
             display: none;
-
         }
 
         &__lang, &__login, &__search-tablet {

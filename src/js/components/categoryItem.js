@@ -23,8 +23,16 @@ catsNew.forEach((item) => {
     }
 })
 
+// function createList(color, name) {
+//     return `
+//     // <li class="categories__item"><div class="categories__color" style="background: #${color};"></div><a href="#" class="categories__name link">${name}</a></li>
+//     `
+// }
+
 function createList(color, name) {
     return `
-    <li class="categories__item"><div class="categories__color" style="background: #${color};"></div><a href="#" class="categories__name link">${name}</a></li>
+    <li class="categories__item">
+        <a href="#" class="categories__name link" style="--color: #${color}">${name}</a>
+    </li>
     `
 }

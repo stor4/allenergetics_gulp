@@ -20,6 +20,7 @@
         width: 8px;
         border-radius: 16px;
         margin-right: 4px;
+        display: none ;
     }
 
     &__name {
@@ -28,5 +29,18 @@
         cursor: pointer;
         text-decoration: none;
         color: inherit;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 8px;
+            width: 8px;
+            border-radius: 16px;
+            background-color: var(--color);;
+        }
     }
 }

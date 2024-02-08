@@ -40,3 +40,5 @@ function closeLang() {
     lang.style.borderBottomRightRadius = '12px'
     lang.style.backgroundColor = 'none'
 }
+
+window.openMenu = openMenu;

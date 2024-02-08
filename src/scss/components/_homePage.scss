@@ -13,8 +13,6 @@
     &__header {
         display: flex;
         flex-direction: row;
-
-
     }
 
     &__hero {
@@ -22,15 +20,56 @@
     }
 
     &__category {
-        padding: 15px 0 15px 15px;
+        padding: 35px 0 35px 65px;
         background-color: #fafafa;
-        width: 20%;
+        width: clamp(200px, 30%, 400px);
         margin-right: 15px;
+        color: #333333;
+        font-weight: 300;
 
         &-title{
             font-size: 32px;
             font-weight: bold;
-            margin-left: 35px;
+            margin-left: -15px;
+            margin-bottom: 30px;
+        }
+
+        a{
+            font-size: 16px;
         }
     }
 }
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .home {
+        &__category {
+            display: none;
+        }
+
+        &__hero {
+            width: 100%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .home {
+        &__category {
+            display: none;
+        }
+
+        &__hero {
+            width: 100%;
+        }
+    }
+
+}
+
+// @media only screen and (min-width: 1280px) and (max-width: 1920px) {
+
+// }
+
+// @media only screen and (min-width: 1920px){
+
+// }

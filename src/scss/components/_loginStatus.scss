@@ -22,15 +22,22 @@
         }
     }
 
+    &__btn-open {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
     &__btn-img {
         margin: 2px 4px 0 0;
     }
 
-    &__btn-open {
+    &__btn-text {
         color: $green;
         background-color: transparent;
         border: none;
-        cursor: pointer;
     }
 
     &__form {
@@ -46,6 +53,8 @@
         align-items: center;
         border: 0.5px solid $gray;
         transition: opacity 0.3s ease; 
+        z-index: 2;
+        background-color: white;
     }
 
     &__form-login {
