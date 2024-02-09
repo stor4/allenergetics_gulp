@@ -74,26 +74,35 @@
 
         div {
             position: absolute;
-            top: 30px;
+            top: 38px;
+            right: -55px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            border: 1px solid $green;
             border-radius: 12px;
-            width: 35px;
-            height: 60px;
+            height: 50px;
             opacity: 0;
             transition: opacity 0.2s ease;
-            width: 100%; 
-            z-index: 2;
+            z-index: 3;
             background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
     
-            img {
-                margin: 4px 0;
+            a {
                 cursor: pointer;
                 width: 24px;
                 height: 24px;
+                margin: 0 5px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url("https://img.icons8.com/ios-filled/50/ffffff/trine-120.png");
+                background-repeat: no-repeat;
+                background-position: top;
+                width: 25px;
+                height: 25px;
+                top: -13px;
             }
         }
     
@@ -254,7 +263,6 @@
     }
 
     input{
-        // margin-left: 15px;
         width: 100%;
         background-color: transparent;
         border: 1px solid $gray;

@@ -43,37 +43,139 @@
     &__form {
         display: flex;
         opacity: 0;
+        font-size: 12px;
+        width: 310px;
+        height: 300px;
         position: absolute;
         top: 60px;
-        left: -55px;
-        padding: 15px;
+        padding: 30%;
         border-radius: 12px;
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        border: 0.5px solid $gray;
         transition: opacity 0.3s ease; 
         z-index: 2;
         background-color: white;
+        color: gray;
+        border: none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        font-weight: 300;
+
+        &-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: black;
+        }
+
+        &-l-title {
+            position: absolute;
+            left: 20px;
+            top: 53px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        &-p-title {
+            position: absolute;
+            left: 19px;
+            top: 113px;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url("https://img.icons8.com/ios-filled/50/ffffff/trine-120.png");
+            background-repeat: no-repeat;
+            background-position: top;
+            width: 25px;
+            height: 25px;
+            // background-color: black;
+            top: -17px;
+        }
     }
 
     &__form-login {
         width: 100%;
+        border-width: 0.5px;
+        background-color: #f6f6f6;
+        height: 35px;
+        border-radius: 5px;
     }
 
     &__form-psw {
         width: 100%;
+        margin-top: 20px;
+        border-width: 0.5px;
+        background-color: #f6f6f6;
+        height: 35px;
+        border-radius: 5px;
+    }
+
+    &__form-checkbox {
+        position: absolute;
+        left: 19px;
+        top: 173px;
+        border-radius: 2px;
+        height: 15px;
+        width: 15px;
+        background-color: white;
+        border: 1px solid gray;
+        cursor: pointer;
+
+        &::before {
+            content: 'Запомнить';
+            position: absolute;
+            top: -1px;
+            left: 20px;
+            font-weight: 12px;
+            font-weight: 300;
+            color: gray;
+        }
     }
 
     &__form-submit {
         height: 40px;
-        margin: 15px 0 5px 0;
+        margin: 30px 0 5px 0;
         cursor: pointer;
+        width: 100%;
+        border-radius: 5px;
+        font-weight: bold;
+
+        &::before {
+            content: '';
+            width: 15px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-image: url('https://img.icons8.com/tiny-glyph/16/ffffff/enter-2.png');
+            position: absolute;
+            bottom: 74px;
+            left: 118px;
+            z-index: 3;
+        } 
     }
 
     &__form-link {
-        text-decoration: underline;
+        text-decoration: none;
         cursor: pointer;
+        color: $green;
+    }
+
+    &__form-help {
+        position: absolute;
+        top: 175px;
+        right: 19px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__form-reg {
+        margin-top: 20px;
     }
 
     &__reg {
@@ -83,5 +185,6 @@
 .login__btn:hover .login__form,
 .login__btn-open:hover + .login__form {
     opacity: 1;
+
 }
 
