@@ -38,7 +38,6 @@
             width: 15px;
             position: relative;
             background-color: black;
-            rotate: (45deg);
             position: absolute;
         }
     }
@@ -59,7 +58,7 @@
     }
 
     &__categories {
-        padding: 15px 0 15px 15px;
+        padding: 15px 0 15px 50px;
         border-top: 1px solid #f0f0f0;
         border-bottom: 1px solid #f0f0f0;
 

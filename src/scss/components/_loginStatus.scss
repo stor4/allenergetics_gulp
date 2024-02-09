@@ -20,6 +20,11 @@
             max-width: 16px;
             flex-shrink: 0;
         }
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $green;
+        }
     }
 
     &__btn-open {
@@ -161,6 +166,11 @@
         text-decoration: none;
         cursor: pointer;
         color: $green;
+
+        &:hover {
+            text-decoration: underline;
+            text-decoration-color: $green;
+        }
     }
 
     &__form-help {

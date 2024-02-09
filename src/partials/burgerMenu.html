@@ -4,7 +4,7 @@
         <div class='stripe middle'></div>
         <div class='stripe'></div>
     </div>
-    <div class="menu" id="menu">
+    <div class="menu" id="menu" onclick="closeOut(event)">
         <div class="menu__body" id='menu__body'>
           <div class="menu__header">
                 <div class="menu__close" id="menu_closeButton" onclick="closeMenu()">
@@ -52,14 +52,3 @@
         </div>
       </div>
 </div>
-<script>
-
-  //   document.addEventListener('click', function(event) {
-  //   const isClickInsideMenu = menuContainer.contains(event.target);
-  //   if (isClickInsideMenu && isMenuOpen) {
-  //       return;
-  //   }
-  //       menu.style.visibility = 'hidden';
-  //       menuContainer.style.transform = 'translateX(-300px)';
-  // });
-</script>
