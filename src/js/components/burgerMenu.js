@@ -42,3 +42,6 @@ function closeLang() {
 }
 
 window.openMenu = openMenu;
+window.closeMenu = closeMenu;
+window.openLang = openLang;
+window.closeLang = closeLang;
