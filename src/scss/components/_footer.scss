@@ -18,8 +18,8 @@
         border-radius: 50%;
         color: white;
         position: fixed;
-        bottom: 18.5%;
-        right: 10%;
+        bottom: 110px;
+        right: 10vw;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,6 +27,7 @@
         transition: color 0.5s ease;
         opacity: 0.5;
         visibility: hidden;
+        z-index: 99;
 
         &:hover {
             background-color: white;
@@ -44,6 +45,7 @@
             height: 24px;
             width: 24px;
             margin: 0 5px;
+            filter: invert(50%);
         }
     }
 
@@ -193,7 +195,7 @@
         }
 
         &__scroll {
-            right: 5%;
+            right: 7vw;
         }
 
         &__top-nav {
@@ -229,7 +231,7 @@
         }
 
         &__scroll {
-            right: 5%;
+            right: 7vw;
         }
 
         &__top-nav {
@@ -269,7 +271,7 @@
         }
 
         &__scroll {
-            right: 10%;
+            right: 5vw;
         }
 
         &__top-about {
