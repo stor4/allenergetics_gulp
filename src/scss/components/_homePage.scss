@@ -40,6 +40,126 @@
     }
 }
 
+.grid {
+
+    &__item {
+        background-image: url('https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        min-height: 552px;
+        width: clamp(320px, 100%, 1481px);
+        border-radius: 12px;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.25);
+            top: 0;
+            left: 0;
+            z-index: 0;
+            border-radius: 12px;
+        }
+    }
+
+    &__item-label {
+        background-color: #663ab6;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 12px;
+        border-bottom-left-radius: 12px;
+        padding: 7px 15px;
+        border-top-right-radius: 12px;
+        z-index: 1;
+
+        p{
+            margin: 0;
+        }
+    }
+
+    &__item-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 60%;
+        z-index: 1;
+    }
+
+    &__item-title{
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    &__item-description{
+        font-size: 16px;
+        margin: 15px;
+    }
+
+    &__item-button{
+        color: white;
+        font-weight: bold;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__item-about {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 20px;
+        z-index: 1;
+
+        img{ 
+            filter: invert(100%);
+            height: 24px;
+            width: 24px;
+            margin-right: 5px;
+        }
+    }
+}
+.hero {
+
+    &__text-title {
+    }
+
+    &__text-description {
+    }
+
+    &__text-button {
+    }
+
+    &__about-views {
+    }
+
+    &__about-comments {
+    }
+
+    &__about-shares {
+    }
+
+    &__about-user {
+    }
+}
+
+
+
 @media only screen and (min-width: 0) and (max-width: 768px) {
     .home {
         &__category {

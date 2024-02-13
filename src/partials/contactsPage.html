@@ -2,15 +2,24 @@
     <div class="contacts__body default-body">
         <div class="contacts__form">
             <p class="contacts__form-title">Контакты</p>
-            <p class="contacts__form-mail">info@sourcenergy.com</p>
-            <p class="contacts__form-phone">0 (800) 659 15 47</p>
-            <input type="text" class="contacts__form-name">
-            <input type="text" class="contacts__form-contact">
-            <input type="text" class="contacts__form-msg">
-            <button>Отправить</button>
+            <a href="mailto:info@sourcenergy.com" class="contacts__form-mail">info@sourcenergy.com</a>
+            <a href="tel:+3808006591547" class="contacts__form-phone">0 (800) 659 15 47</a>
+            <div class="contacts__form-item" data-label="Имя">
+                <input class="default-input" type="text">
+            </div>
+            <div class="contacts__form-item" data-label="Телефон или Email">
+                <input class="default-input" type="email">
+            </div>
+            <div class="contacts__form-item" data-label="Сообщение">
+                <input class="default-input" type="tel">
+            </div>
+            <button class="contacts__form-btn btn-big">Отправить</button>
         </div>
+        
         <div class="contacts__map">
-
+            <gmp-map center="49.99362564086914,36.23191452026367" zoom="14" map-id="DEMO_MAP_ID">
+                <gmp-advanced-marker position="49.99362564086914,36.23191452026367" title="My location"></gmp-advanced-marker>
+            </gmp-map>
         </div>
     </div>
 </div>

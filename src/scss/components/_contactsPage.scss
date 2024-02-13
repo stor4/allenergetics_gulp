@@ -10,51 +10,143 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         width: 100%;
         position: relative;
 
-        input {
-            margin: 7px 0;
-
-            &::before {
-                content: 'Name';
-                position: absolute;
-                width: 25px;
-                height: 10px;
-                background-color: black;
-                top: 20px;
-            }
+        * {
+            width: clamp(300px, 424px, 524px);
         }
     }
 
     &__form-title {
         font-size: 50px;
         font-weight: 800;
+        text-align: center;
     }
 
     &__form-mail {
         font-size: 32px;
         margin: 15px 0 10px 0;
+        color: inherit;
+        text-align: center;
     }
 
     &__form-phone {
         font-size: 32px;
         margin: 0 0 15px 0;
+        color: inherit;
+        text-align: center;
     }
 
-    &__form-name {
-        // width: 100%;
+    &__form-item {
+        position: relative;
+        margin: 15px 0;
     }
 
-    &__form-contact {
-
+    &__form-item input {
+        height: 48px;
+        // width: 424px;
+        
+        padding: 0 15px;
     }
 
-    &__form-msg {
+    &__form-item::before {
+        content: attr(data-label);
+        position: absolute;
+        top: -18px;
+        left: 4px;
+        color: #333333;
+        font-size: 11px;
+        font-weight: bold;
     }
 
+    &__form-btn {
+        height: 48px;
+        width: 424px;
+        border-radius: 4px;
+        margin-top: 25px;
+        position: relative;
+        
+        &::before {
+            content: '';
+            background-image: url("../../img/svg/telegram_icon.svg");
+            background-repeat: no-repeat;
+            object-fit: contain;
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            left: 138px;
+            top: 9px;
+        }
+
+        &:hover::before {
+            background-image: url("../../img/svg/telegram_green_icon.svg");
+        }
+    }
+    
     &__map {
+        height: 520px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 1280px) {
+
+    .contacts {
+        &__form-phone {
+            background-color: $green;
+            color: white;
+            font-size: 14px;
+            padding: 16px;
+            width: 424px;
+            text-align: center;
+            position: relative;
+            border-radius: 4px;
+            border: 1px solid $green;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                background-image: url(../../img/phone_icon.png);
+                position: absolute;
+                left: 125px;
+                top: 14px;
+                height: 24px;
+                width: 24px;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: $green;
+
+                &::before {
+                    background-image: url(../../img/phone_icon_green.png);
+                    width: 50px;
+                    height: 50px;
+                    scale: 0.45;
+                    object-fit: cover;
+                    left: 110px;
+                    top: 0;
+        
+                }
+            }
+
+        }
     }
 
 }
 
+// @media only screen and (min-width: 768px) and (max-width: 1280px) {
+
+// }
+
+// @media only screen and (min-width: 1280px) and (max-width: 1920px) {
+
+// }
+
+// @media only screen and (min-width: 1920px){
+
+// }
