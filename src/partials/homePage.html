@@ -9,39 +9,45 @@
                 @include('./heroSlider.html')
             </div>
         </div>
-        <div class="home__grid-top" id="topList">
-            <li class="grid__item">
-                <div class="grid__item-label">
-                    <p>Солнечная энергия</p>
-                </div>
-                <div class="grid__item-text">
-                    <p class="grid__item-title">Мощнейшая в мире ветровая турбина MHI Vestas выдаст 10МВт энергии</p>
-                    <p class="grid__item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut perspiciatis porro placeat vel nulla molestias suscipit in repellat commodi id. Eligendi, at ipsa ab quam cupiditate neque dolorem. Sit, est.</p>
-                    <a class="grid__item-button">Подробнее →</a>
-                </div>
-                <div class="grid__item-about">
-                    <div class="hero__about-views">
-                        <img src="../img/views_icon.png" alt="views">
-                        <p>1269</p>
-                    </div>
-                    <div class="hero__about-comments">
-                        <img src="../img/comments_icon.png" alt="comments">
-                        <p>26</p>
-                    </div>
-                    <div class="hero__about-shares">
-                        <img src="../img/svg/share_icon.svg" alt="share">
-                        <p>72</p>
-                    </div>
-                    <div class="hero__about-user">
-                        <!-- <img> -->
-                        <div>
-                            <p class="user-name">aeroboy123</p>
-                            <p>8 окт 2018</p>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
+        <div class="grid__top">
+            <div class="home__card home__mobilecategory">
+                <p class="home__category-title">Разделы</p>
+                @include('./categoryItem.html')
+            </div>
+            @include('./topArticles.html', {
+              "title" : 'Гигантская приливная турбина SR2000 поставла новый рекорд',
+              "background" : 'https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png',
+              "description" : '',
+              "labelColor" : '#8cc737'
+            })
+            @include('./topArticles.html', {
+                "title" : 'Созданы инновационные солнечные модули для автономного дерижабля',
+                "background" : 'https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png',
+                "description" : '',
+                "about" : 'none',
+                "labelColor" : '#e81e62',
+                "button" : 'none',
+            })
+            @include('./topArticles.html', {
+                "title" : 'Предел КПД солнечных элементов можно поднять до 40%',
+                "background" : 'https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png',
+                "description" : '',
+                "labelColor" : '#f34236',
+            })
+            @include('./topArticles.html', {
+                "title" : 'Крупные СЭС и ВЭС в Сахаре принесут в пустыню дожди',
+                "background" : 'https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png',
+                "description" : '',
+                "labelColor" : '#663ab6',
+            })
+            @include('./topArticles.html', {
+                "title" : 'Синергия блокчейн-энергетики и ВИЭ обеспечит захват $2-триллионного рынка',
+                "background" : 'https://allenergetics.com/cache/8/8cbeee6b638c1eab220ac286e01f97d7.png',
+                "description" : '',
+                "about" : 'none',
+                "labelColor" : '#50cfe0',
+                "button" : 'none',
+            })
         </div>
     </div>
 </div>
