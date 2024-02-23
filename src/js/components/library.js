@@ -73,7 +73,7 @@ const footerSwiper = new Swiper(".libraryFooterSwiper", {
             slidesPerView : 1
         },
         808: {
-            slidesPerView: 1.2
+            slidesPerView: 1
         },
         948: {
             slidesPerView: 1.4

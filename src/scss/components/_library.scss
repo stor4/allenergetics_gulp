@@ -8,7 +8,9 @@
     position: relative;
 
     &__body {
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__title {
@@ -130,20 +132,20 @@
 
     &__loadMore {
         margin-top: 30px;
+        width: 176px;
         background-color: transparent;
         color: $green;
         position: relative;
         padding-left: 30px;
-        width: auto;
+        // width: auto;
         font-weight: 500;
-        left: 50%;
 
         &::after {
             content: '';
             background-image: url('../../img/svg/reload_icon.svg');
             background-repeat: no-repeat;
-            width: 400px;
-            height: 400px;
+            width: 18px;
+            height: 18px;
             position: absolute;
             top: 13px;
             left: 30px;
@@ -183,8 +185,6 @@
     &__selection-item {
         flex: 1;
         height: 240px;
-        width: 100%;
-        // background-color: cyan;
         text-align: center;
         color: white;
         text-align: center;
@@ -341,23 +341,7 @@
 .swiper {
     width: 100%;
     height: 100%;
-  }
-
-//   .swiper-slide {
-//     text-align: center;
-//     font-size: 18px;
-//     background: #fff;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   .swiper-slide img {
-//     display: block;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
+}
 
 .swiper-pagination {
     margin-top: 15px;
