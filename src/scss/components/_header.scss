@@ -191,13 +191,37 @@
     &__login {
     }
 }
+
 .nav {
 
     &__body {
         display: flex;
         white-space: 0;
         color: $textGray;
+        position: relative;
     }
+
+    &__cats {
+        position: absolute;
+        // background-color: rgba(0, 0, 0, 0.5);
+        width: 200px;
+        // height: 100vh;
+        right: 0;
+        z-index: 2;
+        left: -25px;
+        top: 25px;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+
+        .categories {
+            background-color: white;
+            padding: 5px 25px 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        }
+    }
+
+
 
     &__item {
         margin-right: 20px;
@@ -245,6 +269,11 @@
         }
     }
 }
+
+.cats__nav:hover + .nav__cats, .nav__cats:hover {
+    opacity: 1;
+}
+
 .search {
     height: 48px;
     width: 100%;

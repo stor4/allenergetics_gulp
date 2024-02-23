@@ -1,0 +1,247 @@
+<div class="library">
+    <div class="library__body default-body">
+        <p class="library__title">Популярное в библиотеке</p>
+        <div class="library__header">
+            @include('./libraryCardBig.html', {
+                'title' : 'Настольная книга энергетика',
+                'author' : 'А. Панфилов, В. Энговатов',
+                'description' : 'Для специалистов занимающихся эксплуатацией электрических и тепловых установок. Даны ответы на вопросы из Правил технической эксплуатации электроустановок потребителей, Межостраслевых правил по охране труда (правил безопасности) при эксплуатации электроустановок, Правил устройства электроустановок. Правил технической эксплуатации тепловых электроустановок.',
+                'price' : '$12.99'
+            })
+            @include('./libraryCardBig.html', {
+                'title' : 'Настольная книга энергетика',
+                'author' : 'А. Панфилов, В. Энговатов',
+                'description' : 'Для специалистов занимающихся эксплуатацией электрических и тепловых установок. Даны ответы на вопросы из Правил технической эксплуатации электроустановок потребителей, Межостраслевых правил по охране труда (правил безопасности) при эксплуатации электроустановок, Правил устройства электроустановок. Правил технической эксплуатации тепловых электроустановок.',
+                'price' : '$12.99'
+            })
+            @include('./libraryCardBig.html', {
+                'title' : 'Настольная книга энергетика',
+                'author' : 'А. Панфилов, В. Энговатов',
+                'description' : 'Для специалистов занимающихся эксплуатацией электрических и тепловых установок. Даны ответы на вопросы из Правил технической эксплуатации электроустановок потребителей, Межостраслевых правил по охране труда (правил безопасности) при эксплуатации электроустановок, Правил устройства электроустановок. Правил технической эксплуатации тепловых электроустановок.',
+                'price' : '$12.99'
+            })
+        </div>
+        <div class="library__swiper">
+            <div class="swiper libraryHeaderSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    @include('./libraryCardBig.html', {
+                        'title' : 'Настольная книга энергетика',
+                        'author' : 'А. Панфилов, В. Энговатов',
+                        'description' : 'Для специалистов занимающихся эксплуатацией электрических и тепловых установок. Даны ответы на вопросы из Правил технической эксплуатации электроустановок потребителей, Межостраслевых правил по охране труда (правил безопасности) при эксплуатации электроустановок, Правил устройства электроустановок. Правил технической эксплуатации тепловых электроустановок.',
+                        'price' : '$12.99'
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('./libraryCardBig.html', {
+                        'title' : 'Настольная книга энергетика',
+                        'author' : 'А. Панфилов, В. Энговатов',
+                        'description' : 'Для специалистов занимающихся эксплуатацией электрических и тепловых установок. Даны ответы на вопросы из Правил технической эксплуатации электроустановок потребителей, Межостраслевых правил по охране труда (правил безопасности) при эксплуатации электроустановок, Правил устройства электроустановок. Правил технической эксплуатации тепловых электроустановок.',
+                        'price' : '$12.99'
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @include('./libraryCardBig.html', {
+                        'title' : 'Настольная книга энергетика',
+                        'author' : 'А. Панфилов, В. Энговатов',
+                        'description' : 'Для специалистов занимающихся эксплуатацией электрических и тепловых установок. Даны ответы на вопросы из Правил технической эксплуатации электроустановок потребителей, Межостраслевых правил по охране труда (правил безопасности) при эксплуатации электроустановок, Правил устройства электроустановок. Правил технической эксплуатации тепловых электроустановок.',
+                        'price' : '$12.99'
+                    })
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+        <div class="library__filter">
+            <p class="library__filter-title">Каталог книг</p>
+            <div class="search library__filter-search">
+                <input placeholder="Искать книги">
+            </div>
+            <div class="library__filter-sort" id="sort" onclick="openSort()" data-text="Сортировать">
+                Новинки
+                <div class="library__filter-sortlist" id="sortList" onclick="closeSort()">
+                    <p class="library__filter-item" onclick="closeSort()">Популярное</p>
+                    <p class="library__filter-item" onclick="closeSort()">От дорогих</p>
+                    <p class="library__filter-item" onclick="closeSort()">От дешевых</p>
+                </div>
+            </div>
+            <div class="library__filter-cats" id="cats" onclick="openCats()" data-text="Показать категории">
+                Все
+                <div class="library__filter-catslist" id="catsList" onclick="closeCats()">
+                    <p class="library__filter-item" onclick="closeCats()">Только бесплтатные</p>
+                    <p class="library__filter-item" onclick="closeCats()">Только платные</p>
+                </div>
+            </div>
+            <div class="search library__filter-mobilesearch">
+                <input placeholder="Искать книги">
+            </div>
+        </div>
+        <div class="library__main" id="smallCardsList">
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+            @include('./libraryCardSmal.html', {
+                "title" : "Бытовые современные счетчики газа и газоанализаторы",
+                "author" : "А. Кашкаров",
+                "img" : "https://images.prom.ua/3858495475_w640_h640_3858495475.jpg",
+            })
+        </div>
+        <!-- <button class="btn-big library__loadMore" id="loadMoreBtn" onclick="loadMoreBooks()">Хочу еще</button> -->
+        <div class="library__footer">
+            <p class="library__footer-title">Рекоммендуемые подборки</p>
+            <div class="library__selection">
+                <div class="library__selection-item" style="background-color: #e07070;">
+                    <p class="library__selection-title">Ветрянная энергетика</p>
+                    <p class="library__selection-upd">Обновлено 2 дня назад</p>
+                </div>
+                <div class="library__selection-item" style="background-color: #a5e070;">
+                    <p class="library__selection-title">Бизнес на эко энергии</p>
+                    <p class="library__selection-upd">Обновленно вчера</p>
+                </div>
+                <div class="library__selection-item" style="background-color: #896de4;">
+                    <p class="library__selection-title">Домашние электростанции</p>
+                    <p class="library__selection-upd">Обновленно вчера</p>
+                </div>
+            </div>
+        </div>
+        <div class="library__footerSwiper">
+            <p class="library__footer-title">Рекоммендуемые подборки</p>
+            <div class="swiper libraryFooterSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="library__selection-item" style="background-color: #e07070;">
+                        <p class="library__selection-title">Ветрянная энергетика</p>
+                        <p class="library__selection-upd">Обновлено 2 дня назад</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="library__selection-item" style="background-color: #a5e070;">
+                        <p class="library__selection-title">Бизнес на эко энергии</p>
+                        <p class="library__selection-upd">Обновленно вчера</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="library__selection-item" style="background-color: #896de4;">
+                        <p class="library__selection-title">Домашние электростанции</p>
+                        <p class="library__selection-upd">Обновленно вчера</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</div>

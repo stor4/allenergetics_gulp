@@ -1,0 +1,46 @@
+.library {
+    &__cardsmall {
+        // width: 450px;
+        display: flex;
+        position: relative;
+
+    }
+
+    &__cardsmall-img {
+        width: 123px;
+        height: 171px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &__cardsmall-header {
+        margin: 30px 0 0 30px;
+    }
+
+    &__cardsmall-title {
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 23px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__cardsmall-author {
+        font-size: 14px;
+        font-weight: 300;
+        color: $textGraySecondary;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    &__cardsmall-rate {
+        margin-top: 10px;
+    }
+
+    &__cardsmall-star {
+        height: 24px;
+    }
+}
