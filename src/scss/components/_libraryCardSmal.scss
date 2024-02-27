@@ -43,4 +43,39 @@
     &__cardsmall-star {
         height: 24px;
     }
+
+    &__cardsmall-star use {
+        fill: $textGraySecondary;
+    }
+
+    &__cardsmall-rate[data-stars="1"] .library__cardsmall-star:nth-of-type(1) use,
+    &__cardsmall-rate[data-stars="2"] .library__cardsmall-star:nth-of-type(1) use,
+    &__cardsmall-rate[data-stars="3"] .library__cardsmall-star:nth-of-type(1) use,
+    &__cardsmall-rate[data-stars="4"] .library__cardsmall-star:nth-of-type(1) use,
+    &__cardsmall-rate[data-stars="5"] .library__cardsmall-star:nth-of-type(1) use {
+        fill: #ffdd00;
+    }
+    
+    &__cardsmall-rate[data-stars="2"] .library__cardsmall-star:nth-of-type(2) use,
+    &__cardsmall-rate[data-stars="3"] .library__cardsmall-star:nth-of-type(2) use,
+    &__cardsmall-rate[data-stars="4"] .library__cardsmall-star:nth-of-type(2) use,
+    &__cardsmall-rate[data-stars="5"] .library__cardsmall-star:nth-of-type(2) use {
+        fill: #ffdd00;
+    }
+    
+    &__cardsmall-rate[data-stars="3"] .library__cardsmall-star:nth-of-type(3) use,
+    &__cardsmall-rate[data-stars="4"] .library__cardsmall-star:nth-of-type(3) use,
+    &__cardsmall-rate[data-stars="5"] .library__cardsmall-star:nth-of-type(3) use {
+        fill: #ffdd00;
+    }
+    
+    &__cardsmall-rate[data-stars="4"] .library__cardsmall-star:nth-of-type(4) use,
+    &__cardsmall-rate[data-stars="5"] .library__cardsmall-star:nth-of-type(4) use {
+        fill: #ffdd00;
+    }
+    
+    &__cardsmall-rate[data-stars="5"] .library__cardsmall-star:nth-of-type(5) use {
+        fill: #ffdd00;
+    }
+    
 }
