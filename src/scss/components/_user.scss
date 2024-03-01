@@ -1,0 +1,538 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $textGray;
+    margin-top: 15px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1200px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__name-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30px;
+    }
+
+    &__img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+
+    &__fullName {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__nickname {
+        font-size: 14px;
+        font-weight: 600;
+        position: relative;
+
+        &::after {
+            content: none;
+            background-image: url(../../img/user_smth.png);
+            position: absolute;
+            width: 40px;
+            height: 34px;
+            left: 90px;
+            top: -15px;
+        }
+    }
+
+    &__year {
+        font-size: 16px;
+    }
+
+    &__stats {
+        display: flex;
+        margin-left: 10px;
+        position: relative;
+    }
+
+    &__smth, 
+    &__stats-articles, 
+    &__stats-comments, 
+    &__stats-popular {
+        margin: 15px 40px;
+        font-size: 24px;
+        font-weight: 600;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            font-size: 12px;
+            font-weight: 400;
+            color: $textGraySecondary;
+            bottom: 0;
+            left: 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #fafafa;
+            border-radius: 50%;
+            left: -55px;
+            background-repeat: no-repeat;
+            background-position: 50%;
+        }
+    }
+
+    &__smth {
+        margin: 20px 80px 15px 33px;
+    }
+
+    &__stats-articles {
+
+        &::before {
+            background-image: url(../../img/user_arts.png);
+        }
+
+        &::after {
+            content: 'статей';
+        }
+    }
+
+    &__stats-comments {
+        margin-left: 50px;
+
+        &::before {
+            background-image: url(../../img/user_comments.png);
+        }
+
+        &::after {
+            content: 'комментариев';
+        }
+    }
+
+    &__stats-popular {
+        margin-left: 75px;
+        
+        &::before {
+            background-image: url(../../img/user__popular.png);
+        }
+
+        &::after {
+            content: 'популярных статей';
+            width: 130px;
+        }
+    }
+
+    &__social {
+        width: 30%;
+        margin-top: 15px;
+        // width: 200px;     
+        display: flex;
+        flex-direction: column;
+        // align-items: center;   
+    }
+
+    &__social-role, 
+    &__social-mail, 
+    &__social-phone, 
+    &__social-link,
+    &__social-other {
+        margin: 5px 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            left: -35px;
+            height: 25px;
+            width: 25px;
+        }
+
+    }
+
+    &__social-role {
+
+        &::before {
+            background-image: url(../../img/svg/crown.svg);
+        }
+    }
+
+    &__social-mail {
+
+        &::before {
+            background-image: url(../../img/svg/mail.svg);
+        }
+    }
+
+    &__social-phone {
+        &::before {
+            background-image: url(../../img/svg/phone.svg);
+        }
+    }
+
+    &__social-link {
+        color: $green;
+        cursor: pointer;
+
+        &::before {
+            background-image: url(../../img/svg/sharelink.svg);
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__social-other {
+    }
+
+    &__social-icon {
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        margin: 0 3.5px;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        div {
+            border-bottom: 1px solid $textGraySecondary;
+        }
+
+        div:last-child, div:nth-child(11) {
+            border-bottom: none;
+        }
+    }
+
+    &__pagination {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__pagination-item:nth-child(2) {
+        background-color: $green;
+        color: white;
+    }
+
+    &__pagination-arrow {
+        margin: 0 15px;
+        cursor: pointer;
+    }
+
+    &__pagination-item {
+        margin: 0 13px;
+        color: $textGraySecondary;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        line-height: 25px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    &__footer {
+        margin-top: 30px;
+    }
+
+    &__footer-title {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: start;
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .user {
+
+        &__header {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__name {
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__name-container {
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+        &__nickname {
+            &::after {
+                content: '';
+            }
+        }
+
+        &__img {
+            margin-left: 50px;
+            margin-bottom: 45px;
+        }
+
+        &__stats {
+            margin: 0;
+        }
+
+        &__smth {
+            display: none;
+        }
+
+        &__smth, 
+        &__stats-articles, 
+        &__stats-comments, 
+        &__stats-popular {
+            margin: 0 25px;
+
+            &::before {
+                content: none;
+            }
+            &::after {
+                top: 25px;
+            }
+        }
+
+        &__stats-articles {
+            margin: 0;
+        }
+
+        &__social {
+            margin-top: 25px;
+            position: relative;
+            width: 410px;
+        }
+
+        &__social-phone {
+            display: none;
+        }
+
+        &__social-role, 
+        &__social-mail, 
+        &__social-phone, 
+        &__social-link,
+        &__social-other {
+            margin: 10px 30px;
+        }
+        &__social-link {
+            width: 350px;
+        }
+
+        &__social-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__social-other {
+            margin-left: 0;
+        }
+
+        &__social-role {
+            font-size: 14px;
+        }
+
+        &__main {
+            align-items: start;
+        }
+
+        &__title {
+            margin-left: 0;
+        }
+
+        &__footer-title {
+            margin-left: 0;
+        }
+
+        &__footer {
+            div {
+                border-bottom: 1px solid $textGraySecondary;
+                padding: 10px 0;
+            }
+    
+            div:last-child, div:nth-child(11) {
+                border-bottom: none;
+            }
+        } 
+    }
+
+ 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .user {
+
+        &__header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__name {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__name-container {
+            align-items: center;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+
+        &__stats {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__nickname {
+            &::after {
+                content: '';
+            }
+        }
+
+        &__smth {
+            display: none;
+        }
+
+        &__smth, 
+        &__stats-articles, 
+        &__stats-comments, 
+        &__stats-popular {
+            &::after {
+                top: 25px;
+            }
+        }
+
+        &__social {
+            margin-top: 25px;
+            position: relative;
+            flex-direction: row;
+            width: 410px;
+            margin-left: 70px;
+        }
+
+        &__social-phone {
+            display: none;
+        }
+
+        &__social-role, 
+        &__social-mail, 
+        &__social-phone, 
+        &__social-link,
+        &__social-other {
+            margin: 10px 30px;
+        }
+        &__social-link {
+            width: 350px;
+        }
+
+        &__social-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__social-other {
+            left: 15px;
+            position: absolute;
+            top: 45px;
+        }
+
+        &__social-role {
+            position: absolute;
+            font-size: 14px;
+            top: -115px;
+            left: 95px
+        }
+
+        &__main {
+            margin-top: 50px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+    .user {
+
+        &__nickname {
+            &::after {
+                content: '';
+            }
+        }
+
+        &__smth {
+            display: none;
+        }
+
+        &__smth, 
+        &__stats-articles, 
+        &__stats-comments, 
+        &__stats-popular {
+            &::after {
+                top: 25px;
+            }
+        }
+
+        &__social {
+            margin-top: 25px;
+        }
+
+        &__social-phone {
+            display: none;
+        }
+
+        &__social-role, 
+        &__social-mail, 
+        &__social-phone, 
+        &__social-link,
+        &__social-other {
+            margin: 10px 0;
+        }
+
+        &__social-other {
+            left: -36px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+
+}

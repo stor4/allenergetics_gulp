@@ -1,0 +1,118 @@
+<div class="blog">
+    <div class="blog__body default-body">
+        <p class="blog__title">Популярное в видеоблоге</p>
+        <div class="blog__header">
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#8cc737',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg',
+                'duration' : '02:16',
+            })
+            @include('./blogCard.html', {
+                'title': 'Более 6000 домашних солнечных электростанций поставляют энергию в сети Украины',
+                'label': 'Солнечная энергия',
+                'label_color' : '#fe9700',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg',
+                'duration' : '02:16',
+            })
+        </div>
+        <div class="blog__filter">
+            <p class="blog__filter-title">Все посты</p>
+            <div class="search blog__filter-search">
+                <input placeholder="Искать в видеоблоге">
+            </div>
+            <div class="blog__filter-sort" id="sort" onclick="openSort()" data-text="Сортировать">
+                Новинки
+                <div class="blog__filter-sortlist" id="sortList" onclick="closeSort()">
+                    <p class="blog__filter-item" onclick="closeSort()">Популярное</p>
+                    <p class="blog__filter-item" onclick="closeSort()">От дорогих</p>
+                    <p class="blog__filter-item" onclick="closeSort()">От дешевых</p>
+                </div>
+            </div>
+            <div class="blog__filter-cats" id="cats" onclick="openCats()" data-text="Показать категории">
+                Все
+                <div class="blog__filter-catslist" id="catsList" onclick="closeCats()">
+                    <p class="blog__filter-item" onclick="closeCats()">Только бесплтатные</p>
+                    <p class="blog__filter-item" onclick="closeCats()">Только платные</p>
+                </div>
+            </div>
+        </div>
+        <p class="blog__mobiletitle">Новые влоги</p>
+        <div class="blog__main">
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#2195f2',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#00bbd3',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#009587',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#feea3b',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#fe9700',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#4bae4f',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#8cc737',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#c632e0',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#bfc3de',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#e81e62',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#f34236',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+            @include('./blogCard.html', {
+                'title': 'Созданы инновационные солнечные модули для автономного дерижабля Stratobus',
+                'label': 'Солнечная энергия',
+                'label_color' : '#009587',
+                'img': '../img/articles/360_F_42099910_vtsWg2oz6uFviZQyQ3Z8iqepex9SfRuR.jpg'
+            })
+        </div>
+        <button class="btn-big library__loadMore" id="loadMoreBtn" onclick="loadMoreBooks()">Хочу еще</button>
+    </div>
+</div>

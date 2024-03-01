@@ -1,0 +1,165 @@
+.userArticles {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    margin: 7px 0;
+
+    &__liked {
+        margin-right: 15px;
+    }
+
+    &__title {
+        max-width: 500px;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 20px 0 12px 0;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__type {
+        position: relative;
+        font-size: 16px;
+        width: 150px;
+        margin: 0 100px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 5px;
+            background-color: var(--color);
+            height: 8px;
+            width: 8px;
+            border-radius: 16px;
+            margin-right: 4px;
+        }
+    }
+
+    &__views,
+    &__comms,
+    &__shares {
+        font-size: 12px;
+        color: $textGraySecondary;
+        margin: 0 20px;
+        position: relative;
+        left: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 17px;
+            width: 17px;
+            left: -23px;
+            top: -0.5px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__views {
+        &::before {
+            background-image: url(../../img/svg/views.svg);;
+        }
+    }
+
+    &__comms {
+        &::before {
+            background-image: url(../../img/svg/comms.svg);;
+        }
+    }
+
+    &__shares {
+        &::before {
+            background-image: url(../../img/svg/share.svg);;
+        }
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .userArticles {
+
+        &__title {
+            margin: 30px 0;
+        }
+
+        &__type {
+            position: absolute;
+            top: 0;
+            left: -65px;
+        }
+
+        &__views,
+        &__comms,
+        &__shares {
+            position: absolute;
+            left: 35px;
+            top: 100px;
+        }
+
+        &__comms{
+            left: 90px;
+        }
+
+        &__shares {
+            left: 135px;
+
+        }
+      }
+
+ 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .userArticles {
+
+        &__title {
+            margin: 30px 0;
+        }
+
+        &__type {
+            position: absolute;
+            top: 0;
+            left: -65px;
+        }
+
+        &__views,
+        &__comms,
+        &__shares {
+            position: absolute;
+            left: 35px;
+            top: 100px;
+        }
+
+        &__comms{
+            left: 90px;
+        }
+
+        &__shares {
+            left: 135px;
+
+        }
+      }
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+  .userArticles {
+
+    &__type {
+        position: absolute;
+        top: 0;
+        left: -65px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1920px){
+
+}

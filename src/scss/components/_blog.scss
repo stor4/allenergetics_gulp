@@ -1,0 +1,200 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $textGray;
+    margin-top: 15px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 500px;
+        gap: 30px;
+        margin-top: 30px;
+        font-size: 24px;
+    }
+
+    &__filter {
+        display: flex;
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    &__mobiletitle {
+        display: none;
+        margin-top: 40px;
+    }
+
+    &__filter-title, &__mobiletitle {
+        padding-top: 6px;
+        font-size: 32px;
+        font-weight: bold;
+        flex: 3;
+    }
+
+    &__filter-search {
+        flex: 2;
+        margin-right: 15px;
+    }
+
+    &__filter-sort, &__filter-cats {
+        flex: 1;
+        height: 48px;
+        width: 248px;
+        background-color: #fcfcfc;
+        border: 1px solid $green;
+        border-radius: 12px;
+        color: $green;
+        font-size: 16px;
+        padding: 14px 15px;
+        position: relative;
+        margin: 0 15px;
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 5px;
+            top: 13px;
+            background-image: url('../../img/arrow_green_icon.png');
+            background-repeat: no-repeat;
+            scale: 0.55;
+        }
+
+        &::before {
+            content: attr(data-text);
+            position: absolute;
+            color: black;
+            font-size: 12px;
+            width: 150px;
+            height: 20px;
+            top: -18px;
+            left: 0;
+            font-weight: 500;
+        }
+    }
+
+    &__filter-sortlist, &__filter-catslist {
+        position: absolute;
+        right: -1px;
+        top: 47px;
+        width: 100.7%;
+        background-color: #fcfcfc;
+        border: 1px solid $green;
+        border-top: none;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        display: none;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    &__filter-item {
+        padding: 15px 15px;
+
+        &:hover {
+            background-color: #f0f0f0;
+        }
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin: 100px 0;
+        font-size: 18px;
+    }
+
+    &__loadMore {
+        margin-top: 30px;
+        width: 176px;
+        background-color: transparent;
+        color: $green;
+        position: relative;
+        padding-left: 30px;
+        // width: auto;
+        font-weight: 500;
+
+        &::after {
+            content: '';
+            background-image: url('../../img/svg/reload_icon.svg');
+            background-repeat: no-repeat;
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 13px;
+            left: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .blog {
+        &__header {
+            grid-template-columns: repeat(1, 1fr);
+            height: 1000px;
+            gap: 15px;
+        }
+
+        &__mobiletitle {
+            display: block;
+        }
+
+        &__main {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 50px 0;
+        }
+
+        &__filter {
+            display: none;
+        }
+    }
+ 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .blog {
+        &__header {
+            grid-template-columns: repeat(1, 1fr);
+            height: 1000px;
+            gap: 15px;
+        }
+
+        &__main {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 10px 0;
+        }
+
+        &__filter {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1920px) {
+    .blog {
+        &__main {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media only screen and (min-width: 1920px){
+
+}

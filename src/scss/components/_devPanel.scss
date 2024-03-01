@@ -1,0 +1,25 @@
+.devPanel {
+    position: fixed;
+    background-color: white;
+    z-index: 99;
+    top: 120px;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &__link {
+        margin: 15px 10px;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
