@@ -1,0 +1,31 @@
+.agreement {
+    font-size: 16px;
+
+    &__body {
+        max-width: 1000px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        margin: 50px 0 15px 0;
+    }
+
+    &__text {
+        margin-bottom: 80px;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1920px) {
+    .agreement {
+        &__body {
+            max-width: 700px;
+        }
+    }
+}
