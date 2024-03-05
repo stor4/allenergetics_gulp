@@ -1,0 +1,42 @@
+<div class="cart">
+    <div class="cart__body container">
+        <p class="cart__title default-title">Корзина</p>
+        <div class="cart__container">
+            <div class="cart__list">
+                @include('cartItem.html', {
+                    'title': 'Альтернативные источники энергии и энергосбережение',
+                    'img': 'https://images.prom.ua/3858495475_w640_h640_3858495475.jpg',
+                    'price': '$1.99',
+                    'isType': '',
+                    'selectedType': 'mobi',
+                })
+                @include('cartItem.html', {
+                    'title': 'Альтернативные источники энергии и энергосбережение',
+                    'img': 'https://images.prom.ua/3858495475_w640_h640_3858495475.jpg',
+                    'price': '$12.99',
+                    'isType': '',
+                    'selectedType': 'mobi',
+                })
+                @include('cartItem.html', {
+                    'title': 'Альтернативные источники энергии и энергосбережение',
+                    'img': 'https://images.prom.ua/3858495475_w640_h640_3858495475.jpg',
+                    'price': '$10.99',
+                    'isType': '',
+                    'selectedType': 'mobi',
+                })
+            </div>
+            <div class="cart__total">
+                <div class="cart__total-container">
+                    <p class="cart__total-text">К оплате:</p>
+                    <p class="cart__total-sum">$0.00</p>
+                </div>
+                <button class="cart__total-btn btn-big">Оплатить</button>
+                <div class="cart__total-container">
+                    <p class="cart__total-subtext">Мы принимаем: </p>
+                    <img src="../img/visa.png" alt="visa" class="cart__total-img">
+                    <img src="../img/mastercard.png" alt="mastercard" class="cart__total-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

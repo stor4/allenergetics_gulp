@@ -1,0 +1,17 @@
+<div class="cartItem" data-price=@price>
+    <img src=@img alt="item_icon" class="cartItem__img">
+    <div class="cartItem__container">
+        <p class="cartItem__price">@price</p>
+        <p class="cartItem__title">@title</p>
+        <div class="cartItem__type">
+            <p class="cartItem__type-text">Формат:</p>
+            <p class="cartItem__type-select" style="visibility: @isType;">@selectedType </p>
+            <div class="cartItem__type-dropdown">
+                <p class="cartItem__type-item"></p>
+                <p class="cartItem__type-item"></p>
+                <p class="cartItem__type-item"></p>
+            </div>
+        </div>
+    </div>
+    <img src="../img/svg/cross.svg" alt="delete" class="cartItem__del"> 
+</div>
