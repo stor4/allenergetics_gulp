@@ -41,6 +41,7 @@ function toggleList() {
 
 window.toggleList = toggleList
 
-checkInputs()
-
+document.addEventListener('DOMContentLoaded', function() {
+    checkInputs()
+})
 

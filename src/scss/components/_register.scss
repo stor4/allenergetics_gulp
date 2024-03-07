@@ -1,0 +1,170 @@
+.register {
+    display: flex;
+    align-items: center;
+    color: $textGray;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header {
+    }
+
+    &__main {
+        margin-top: 3ch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 380px;
+        text-align: center;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        margin: 3px 0;
+        max-width: 400px;
+        line-height: 25px;
+        margin-bottom: 15px;
+    }
+
+    &__input {
+        background-color: #fcfcfc;
+        width: 100%;
+        margin: 13px 0;
+        border-radius: 8px;
+        height: 44px;
+        max-width: none;
+
+        &::before {
+            content: 'Email';
+            position: absolute;
+            left: 0;
+            width: 500px;
+            height: 10px;
+            background-color: black;
+            top: 5px;
+            display: block;
+        }
+    }
+
+    &__input.invalid {
+        border-color: red;
+    }
+
+    &__btn {
+        height: 44px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 14px;
+        margin: 12px 0;
+
+        &:hover {
+            &::before {
+                filter: invert(56%) sepia(67%) saturate(2817%) hue-rotate(118deg) brightness(96%) contrast(93%);
+            }
+        }
+    }
+
+    &__btn-disabled {
+        height: 44px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: 14px;
+        margin: 12px 0;
+        background-color: $textGraySecondary;
+        border-color: $textGraySecondary;
+        cursor: auto;
+
+        &:hover {
+            background-color: $textGraySecondary;
+            color: white;
+        }
+    }
+
+    &__btn, &__btn-disabled {
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url(../../img/svg/reg_icon.svg);
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px;
+            transform: translateX(-100%);
+            position: absolute;
+        }
+    }
+
+    &__checkbox-container {
+        display: flex;
+        position: absolute;
+        bottom: -15px;
+        left: 20px;
+        font-size: 14px;
+
+        span {
+            font-weight: 500;
+            color: $green;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__checkbox {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-width: 0) and (max-width: 768px) {
+    .register {
+        &__body {
+            margin-bottom: 30px;
+        }
+
+        &__main {
+            max-width: none;
+            width: 100%;
+        }
+
+        &__checkbox-container {
+            position: static;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+    .register {
+        &__body {
+            margin-bottom: 30px;
+        }
+
+        &__main {
+            max-width: none;
+            width: 100%;
+        }
+
+        &__br {
+            display: none;
+        }
+
+        &__input, &__btn, &__btn-disabled {
+            max-width: 344px;
+        }
+
+        &__checkbox-container {
+            position: static;
+        }
+    }
+
+}

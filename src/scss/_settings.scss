@@ -140,8 +140,24 @@ p {
   }
 }
 
+.btn-big-disabled {
+  height: 44px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 14px;
+  margin: 12px 0;
+  background-color: $textGraySecondary;
+  border-color: $textGraySecondary;
+  cursor: auto;
+
+  &:hover {
+      background-color: $textGraySecondary;
+      color: white;
+  }
+}
+
 .form-input {
-  color: #bababa;
+  background-color: #fcfcfc;
   padding: 5px;
   border-radius: 8px;
   border: 1px solid $gray;
