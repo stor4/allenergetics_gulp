@@ -10,6 +10,7 @@
         // justify-content: center;
         align-items: center;
         max-width: 424px;
+        position: relative;
     }
 
     &__title {
@@ -43,8 +44,15 @@
         cursor: pointer;
     }
 
-    &__open-icon {
+    &__open-container {
+        display: flex;
+        align-items: center;
+    }
 
+    &__open-icon {
+        width: 9px;
+        height: 5px;
+        margin-left: 10px;
     }
 
     &__list {
@@ -79,13 +87,54 @@
     }
 
     &__form {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        width: 200px;
+        display: flex;
+        flex-direction: column;
+        width: 272px;
         min-width: auto;
         margin-top: 30px;
         // max-width: 300px;
+
+        * {
+            margin: 5px 0;
+        }
+    }
+
+    &__form-1, &__form-3, &__form-2 {
+        position: relative;
+
+        * {
+            width: 100%;
+        }
+
+        label {
+            top: -15px;
+        }
+    }
+
+    &__form-2 {
+        display: flex;
+
+        label:nth-child(3) {
+            left: 150px;
+            width: 60px; 
+        }
+
+        input:nth-child(2) {
+            margin-right: 12px;
+        }
+
+        input:nth-child(4) {
+            margin-left: 12px;
+        }
+
+        label {
+            top: -15px;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        font-size: 11px;
     }
 
     &__btn {
@@ -125,35 +174,6 @@
         // max-width: 100px;
         background-color: #fcfcfc;
         min-width: 0;
-
-        &::before {
-            content: 'test';
-            position: absolute;
-            width: 500px;
-            height: 200px;
-            top: -20px;
-            left: 300px;
-            background-color: black;
-            color: black;
-        }
-
-        &:nth-child(1) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
-
-        &:nth-child(2) {
-            
-        }
-
-        &:nth-child(3) {
-            
-        }
-
-        &:nth-child(4) {
-            grid-column: span 2;
-            grid-row: span 1;
-        }
     }
 }
 
@@ -168,6 +188,13 @@
             max-width: 560px;
             width: 100%;
         }
+
+        &__form {
+            label:nth-child(3) {
+                right: 0;
+                left: 295px;
+            }
+        } 
     }
 }
 
@@ -175,6 +202,10 @@
     .cart3 {
         &__form {
             width: 400px;
+
+            label:nth-child(3) {
+                left: 210px;
+            }
         }
 
         &__btn, &__btn-disabled {

@@ -4,7 +4,10 @@
         <div class="cart3__text">
             <p class="cart3__order">Заказ #1256985</p>
             <p class="cart3__sum">$22.97</p>
-            <p class="cart3__open" onclick="toggleList()">Подробнее <img class="cart3__open-icon" alt="open" src="../img/svg/arrow_down.svg"></p>
+            <div class="cart3__open-container">
+                <p class="cart3__open" onclick="toggleList()">Подробнее </p>
+                <img class="cart3__open-icon" alt="open" src="../img/svg/arrow_down.svg">
+            </div>
         </div>
         <div class="cart3__list">
             <div class="cart3__item">
@@ -25,11 +28,21 @@
             <button class="cart3__change btn-big">Изменить заказ</button>
         </div>
         <div class="cart3__form">
-            <input type="text" class="cart3__input form-input">
-            <input type="text" class="cart3__input form-input">
-            <input type="text" class="cart3__input form-input">
-            <input type="text" class="cart3__input form-input">
-        </div>
+            <div class="cart3__form-1">
+                <label for="number" class="cart3__label">Номер карты *</label>
+                <input type="text" id="number" class="cart3__input form-input" maxlength="19" pattern="\d{4}\s?\d{4}\s?\d{4}\s?\d{4}">
+            </div>
+            <div class="cart3__form-2">
+                <label for="term" class="cart3__label">Срок действия *</label>
+                <input type="text" id="term" class="cart3__input form-input" maxlength="5" pattern="(0[1-9]|1[0-2])\/\d{4}">
+                <label for="cvv" class="cart3__label">CVV код *</label>
+                <input type="text" id="cvv" class="cart3__input form-input" maxlength="3" pattern="\d{3}">
+            </div>
+            <div class="cart3__form-3">
+                <label for="email" class="cart3__label">Email *</label>
+                <input type="text" id="email" class="cart3__input form-input">
+            </div>
+        </div>        
         <button class="cart3__btn btn-big">Оплатить</button>
     </div>
 </div>
