@@ -132,6 +132,8 @@ p {
   border-radius: 12px;
   color: white;
   border: 1px solid $green;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
 
   &:hover {
@@ -149,6 +151,8 @@ p {
   background-color: $textGraySecondary;
   border: none;
   color: white;
+  font-size: 14px;
+  font-weight: 500;
   cursor: auto;
 
   &:hover {
