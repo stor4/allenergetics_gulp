@@ -38,21 +38,21 @@
     &__input {
         background-color: #fcfcfc;
         width: 100%;
-        margin: 13px 0;
+        margin: 5px 0 13px 0;
         border-radius: 8px;
         height: 44px;
         max-width: none;
+    }
 
-        &::before {
-            content: 'Email';
-            position: absolute;
-            left: 0;
-            width: 500px;
-            height: 10px;
-            background-color: black;
-            top: 5px;
-            display: block;
-        }
+    &__e-label, 
+    &__p-label {
+        position: relative;
+        left: -173px;
+        font-size: 11px;
+    }
+
+    &__p-label {
+        left: -168px;
     }
 
     &__input.invalid {
@@ -137,8 +137,23 @@
             width: 100%;
         }
 
+        &__input {
+            margin: 13px 0;
+        }
+
         &__checkbox-container {
             position: static;
+        }
+
+        &__e-label, 
+        &__p-label {
+            position: absolute;
+            left: 0;
+            top: 105px;
+        }
+
+        &__p-label {
+            top: 176px;
         }
     }
 }
@@ -164,6 +179,16 @@
 
         &__checkbox-container {
             position: static;
+        }
+
+        &__e-label, 
+        &__p-label {
+            position: relative;
+            left: -155px;
+        }
+    
+        &__p-label {
+            left: -150px;
         }
     }
 

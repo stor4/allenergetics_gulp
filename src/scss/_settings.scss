@@ -147,13 +147,24 @@ p {
   font-size: 14px;
   margin: 12px 0;
   background-color: $textGraySecondary;
-  border-color: $textGraySecondary;
+  border: none;
+  color: white;
   cursor: auto;
 
   &:hover {
       background-color: $textGraySecondary;
       color: white;
+
+      &::after,
+      &::before {
+        filter: none;
+      }
   }
+}
+
+.btn-big-disabled:hover::before,
+.btn-big-disabled:hover::after {
+  filter: none;
 }
 
 .form-input {

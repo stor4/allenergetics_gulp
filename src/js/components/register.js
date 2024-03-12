@@ -29,6 +29,8 @@ function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-emailInput.addEventListener('input', checkInputs);
-passwordInput.addEventListener('input', checkInputs);
-checkbox.addEventListener('input', checkInputs)
+document.addEventListener("DOMContentLoaded", function() {
+    emailInput.addEventListener('input', checkInputs)
+    passwordInput.addEventListener('input', checkInputs)
+    checkbox.addEventListener('input', checkInputs)
+})

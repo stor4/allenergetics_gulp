@@ -49,47 +49,6 @@ inputs.forEach(input => {
     input.addEventListener('input', checkInputs);
 });
 
-numberInput.addEventListener('input', function(event) {
-    let trimmedValue = this.value.replace(/\s/g, '');
-    trimmedValue = trimmedValue.replace(/\//g, '');
-    
-    let formattedValue = '';
-    for (let i = 0; i < trimmedValue.length; i++) {
-        if (i > 0 && i % 4 === 0) {
-            formattedValue += ' ';
-        }
-        formattedValue += trimmedValue[i];
-    }
-
-    this.value = formattedValue;
-});
-
-termInput.addEventListener('input', function(event) {
-    let trimmedValue = this.value.replace(/\s/g, '');
-    trimmedValue = trimmedValue.replace(/\//g, '');
-    
-    let formattedValue = '';
-    for (let i = 0; i < trimmedValue.length; i++) {
-        if (i > 0 && i % 2 === 0) {
-            formattedValue += '/';
-        }
-        formattedValue += trimmedValue[i];
-    }
-
-    this.value = formattedValue;
-});
-
-emailInput.addEventListener('input', function(event) {
-    const emailValue = this.value.trim();
-    const emailIsValid = validateEmail(emailValue);
-
-    if (!emailIsValid) {
-        this.classList.add('invalid');
-    } else {
-        this.classList.remove('invalid');
-    }
-});
-
 function validateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
@@ -97,6 +56,32 @@ function validateEmail(email) {
 window.toggleList = toggleList
 
 document.addEventListener('DOMContentLoaded', function() {
+    termInput.addEventListener('input', function(event) {
+        let trimmedValue = this.value.replace(/\s/g, '');
+        trimmedValue = trimmedValue.replace(/\//g, '');
+        
+        let formattedValue = '';
+        for (let i = 0; i < trimmedValue.length; i++) {
+            if (i > 0 && i % 2 === 0) {
+                formattedValue += '/';
+            }
+            formattedValue += trimmedValue[i];
+        }
+    
+        this.value = formattedValue;
+    });
+
+    emailInput.addEventListener('input', function(event) {
+        const emailValue = this.value.trim();
+        const emailIsValid = validateEmail(emailValue);
+    
+        if (!emailIsValid) {
+            this.classList.add('invalid');
+        } else {
+            this.classList.remove('invalid');
+        }
+    });
+
     checkInputs()
 })
 

@@ -14,20 +14,45 @@
 
     &__main {
         position: relative;
+        margin-top: 3ch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 380px;
+        text-align: center;
     }
 
     &__input {
     }
 
-    &__img {
+    &__nickname-tick {
+        position: absolute;
+        top: 305px;
+        right: 15px;
+        display: none;
+    }
+
+    &__upload {
+        display: none;
+    }
+
+    &__upload-label {
         margin: 20px 0;
         cursor: pointer;
+        height: 120px;
+        width: 120px;
+        border: 1px solid $textGraySecondary;
+        border-radius: 50%;
+        background-image: url(../../img/svg/upload_user_img.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     &__checkbox-container, 
     &__checkbox-container2 {
         position: absolute;
-        top: 615px;
+        top: 640px;
         right: 90px;
         transform: translateX(50%);
         font-size: 12px;
@@ -35,7 +60,7 @@
     }
 
     &__checkbox-container2 {
-        top: 685px;
+        top: 714px;
     }
 
     &__checkbox {
@@ -43,6 +68,31 @@
     }
 
     &__label {
+    }
+
+    &__e-label {
+        font-size: 11px;
+        position: relative;
+
+        &:nth-child(5),
+        &:nth-child(8) {
+            left: -160px;
+        }
+        &:nth-child(10) {
+            left: -175px;
+        }
+        &:nth-child(12) {
+            left: -163px;
+        }
+        &:nth-child(14) {
+            left: -164px;
+        }
+        &:nth-child(17) {
+            left: -172px;
+        }
+        &:nth-child(20) {
+            left: -114px;
+        }    
     }
 
     &__input {
@@ -115,7 +165,9 @@
             transform: translate(-100%, -5%);
             position: absolute;
         }
+    }
 
+    &__btn-hover {
         &:hover {
             &::before {
                 filter: invert(56%) sepia(67%) saturate(2817%) hue-rotate(118deg) brightness(96%) contrast(93%);
@@ -127,7 +179,7 @@
 @media only screen and (min-width: 0) and (max-width: 409px) {
     .register2 {
         &__checkbox-container {
-            top: 640px;
+            top: 660px;
         }
 
         &__checkbox-container2 {
@@ -143,7 +195,13 @@
         }
 
         &__main {
+            max-width: none;
+            width: 100%;
             text-align: center;
+        }
+
+        &__nickname-tick {
+            top: 314px;
         }
 
         &__input, 
@@ -151,6 +209,36 @@
         &__btn-container  {
             max-width: none;
             width: 100%;
+        }
+
+        &__e-label {
+            &:nth-child(5),
+            &:nth-child(8) {
+                left: -45.8%;
+            }
+            &:nth-child(10) {
+                left: -48%;
+            }
+            &:nth-child(12) {
+                left: -45.8%;
+            }
+            &:nth-child(14) {
+                left: -46%;
+            }
+            &:nth-child(17) {
+                left: -47%;
+            }
+            &:nth-child(20) {
+                left: -39%;
+            }
+        }
+
+        &__checkbox-container {
+            top: 678px;
+        }
+
+        &__checkbox-container2 {
+            top: 760px;
         }
     }
 }
@@ -161,9 +249,8 @@
             margin-bottom: 30px;
         }
 
-        &__main {
-            max-width: none;
-            width: 100%;
+        &__nickname-tick {
+            right: 30px;
         }
 
         &__input, 
@@ -172,14 +259,45 @@
             max-width: 344px;
         }
 
+        &__input {
+            &:nth-child(15), 
+            &:nth-child(18) {
+                margin-bottom: 0px;
+            }
+        }
+
         &__btn1 {
             margin-right: 10px;
         }
 
         &__checkbox-container,
         &__checkbox-container2 {
-            position: static;
+            position: relative;
+            left: 0;
             transform: translateX(45%);
+            top: 3px;
+        }
+
+        &__e-label {
+            &:nth-child(5),
+            &:nth-child(8) {
+                left: -145px;
+            }
+            &:nth-child(10) {
+                left: -160px;
+            }
+            &:nth-child(12) {
+                left: -146px;
+            }
+            &:nth-child(14) {
+                left: -148px;
+            }
+            &:nth-child(17) {
+                left: -155px;
+            }
+            &:nth-child(20) {
+                left: -97px;
+            }
         }
     }
 }

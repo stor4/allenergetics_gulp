@@ -5,17 +5,24 @@
             <img src="../img/svg/cart2_icon.svg" alt="stage_icon" class="cart2__icon">
             <p class="cart2__text">Расскажи о себе</p>
         </div>
-        <div class="register__main register2__main">
+        <div class=" register2__main">
             <p class="register__title">Регистрация</p>
             <p class="register__subtitle">Это займет совсем немного. 
                 <br class="register__br">
                 Получай новости, комментируй, пиши посты.
             </p>
-            <img src="../img/svg/reg_user.svg" alt="user_icon" class="register2__img">
+            <input type="file" accept="image/*" id="upload" class="register2__upload" onchange="setBackgroundImage(this)">
+            <label class="register2__upload-label" for="upload"></label>
+            <label for="nicknameInput" class="register2__e-label">Никнейм</label>
+            <img class="register2__nickname-tick" src="../../img/svg/green_tick.svg">
+            <input type="text" id="nicknameInput" class="register2__input register__input form-input" oninput="checkNicknameLength()">
+            <label for="emailInput" class="register2__e-label">Фамилия</label>
             <input type="text" id="" class="register2__input register__input form-input">
+            <label for="emailInput" class="register2__e-label">Имя</label>
             <input type="text" id="" class="register2__input register__input form-input">
+            <label for="emailInput" class="register2__e-label">Отчество</label>
             <input type="text" id="" class="register2__input register__input form-input">
-            <input type="text" id="" class="register2__input register__input form-input">
+            <label for="emailInput" class="register2__e-label">Телефон</label>
             <input type="text" id="" class="register2__input register__input  form-input">
             <div class="register2__checkbox-container">
                 <input type="radio" id="radio1" class="register2__checkbox" name="visibility">
@@ -23,6 +30,7 @@
                 <input type="radio" id="radio2" class="register2__checkbox" name="visibility" checked>
                 <label class="register2__label" for="radio2">Скрыт</label>
             </div>
+            <label for="emailInput" class="register2__e-label">Email</label>
             <input type="text" id="" class="register__input register2__input form-input">
             <div class="register2__checkbox-container2">
                 <input type="radio" id="radio1" class="register2__checkbox" name="visibility2" checked>
@@ -30,6 +38,7 @@
                 <input type="radio" id="radio2" class="register2__checkbox" name="visibility2">
                 <label class="register2__label" for="radio2">Скрыт</label>
             </div>
+            <label for="emailInput" class="register2__e-label">Ссылка на профиль org.id</label>
             <input type="text" id="" class="register2__input register__input form-input">
         </div>
         <div class="register2__footer">
@@ -56,7 +65,7 @@
             </div>
             <div class="register2__btn-container">
                 <button class="register2__btn1 btn-big">Пропустить</button>
-                <button class="register2__btn2 btn-big">Сохранить</button>
+                <button id="btn" class="register2__btn2 btn-big-disabled" disabled>Сохранить</button>
             </div>
         </div>
     </div>
