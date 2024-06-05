@@ -2,12 +2,16 @@
     color: white;
     background: rgb(20,76,125);
     background: linear-gradient(180deg, rgba(20,76,125,1) 50%, rgba(50,52,53,1) 100%);
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
 
     &__body {
         display: flex;
         align-items: center;
         flex-direction: column;
-        overflow: hidden;
+        // overflow: hidden;
+        margin-top: 0;
     }
 
     &__header {
@@ -23,7 +27,8 @@
 
     &__header-background {
         position: absolute;
-        top: 101px;
+        // top: 101px;
+        top: -10px;
         left: 0;
         z-index: 1;
         width: 100%;
@@ -53,15 +58,16 @@
 
     &__object-1 {
         position: absolute;
+        // transform: translateX(300%);
         right: 0;
-        top: calc(100vw + 100px);
+        // top: calc(100vw + 100px);
         z-index: 0;
     }
 
     &__object-2 {
         position: absolute;
         left: 0;
-        top: calc(50vw + 1730px);
+        top: calc(49vw + 1730px);
         z-index: 0;
     }
 
@@ -85,6 +91,7 @@
     }
 
     &__section2 {
+        // position: relative;
         text-align: center;
         margin-top: 200px;
     }
@@ -200,7 +207,8 @@
         }
 
         &__header-background {
-            top: 380px;
+            // top: 380px;
+            top: 240px;
         }
 
         &__header-description {
@@ -277,11 +285,13 @@
 @media only screen and (min-width: 1280px) and (max-width: 1920px) {
     .about {
     &__object-1 {
-        right: -50px;
+        // right: -50px;
+        transform: translateX(50px);
     }
 
     &__object-2 {
-        left: -70px;
+        // left: -70px;
+        transform: translateX(-70px);
     }
     }
 }

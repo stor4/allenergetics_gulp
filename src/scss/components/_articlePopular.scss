@@ -1,0 +1,17 @@
+.articlePopular {
+  padding: 15px 0;
+
+  p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  div {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(90%) saturate(6206%) hue-rotate(156deg) brightness(99%) contrast(88%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
